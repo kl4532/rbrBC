@@ -7,15 +7,13 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
   </head>
   <body>
-    <h1>Tournament Settings</h1>
-    <div class="content">
-      <div class="difficulty">
-        <select name="" id="">
-          <option value="100">100%</option>
-          <option value="80">80%</option>
-          <option value="60">60%</option>
-        </select>
-      </div>
-    </div>
+    <nav>
+      <ul>
+        <li routerLink="/settings" routerLinkActive="active">Settings</li>
+        <li routerLink="/general" routerLinkActive="active">General</li>
+        <li routerLink="/stage" routerLinkActive="active">Stage</li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
   </body>
 </html>

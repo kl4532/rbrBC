@@ -1,0 +1,22 @@
+ul {
+    list-style: none;
+    display: flex; 
+    margin: 0; 
+    padding: 0; 
+    background-color: red;
+    li {
+        text-align: center;
+        border-right: 1px solid black;
+        padding: 1em; 
+        flex: 1; 
+        color: white;
+        font-size: 2em;
+        &:last-child {
+            border-right: none;
+        }
+        &:hover {
+            background-color: rgba(197, 78, 74, 0.479);
+        }
+
+    }
+}
