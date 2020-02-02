@@ -1,5 +1,5 @@
 {
-  "name": "ae",
+  "name": "rbrBC",
   "version": "0.0.0",
   "main": "electron/dist/main.js",
   "scripts": {
