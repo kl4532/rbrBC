@@ -1,9 +1,47 @@
 <div class="content">
+  <div class="row">
     <div class="difficulty">
-      <select name="" id="">
-        <option value="100">100%</option>
-        <option value="80">80%</option>
-        <option value="60">60%</option>
+      <label for="difficulty">Difficulty</label>
+      <select name="difficulty" id="" >
+        <option *ngFor="let diff of difficulty" value="{{ diff }}">{{ diff }}</option>
+      </select>
+    </div>
+  
+    <div class="surface">
+      <label for="surface">Surface</label>
+      <select name="surface" id="" >
+        <option *ngFor="let surf of surface" value="{{ surf }}">{{ surf }}</option>
       </select>
     </div>
   </div>
+
+  <div class="row">
+    <div class="lenght">
+      <label for="lenght">Lenght</label>
+      <input ngValue="2" ngModel #lmin="ngModel" type="number" name="lmin" id="lenght-min" min="1" max="{{ lmax.value || 20 }}">
+      <input ngModel #lmax="ngModel" type="number" name="lmax" id="lenght-max" min="{{ lmin.value || 1}}" max="20">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="stages">
+      <label for="stages">Number of stages</label>
+      <select [(ngModel)]=tracksNum name="stages" id="">
+        <option *ngFor="let st of stages" value="{{ st }}">{{ st }}</option>
+      </select>
+    </div>
+
+    <input type="submit" value="Generate" (click)="generateTracks()">
+  </div>
+
+  <div class="tracks" *ngIf = "tracks">
+    <label for="tracks">Tracks</label>
+    <select class="col" name="tracks" id="" *ngFor="let tr of tracks">
+      <option value="{{ tr.Stage }}">{{ tr.Stage }}</option>
+    </select>
+  </div>
+
+    <input type="submit" value="Submit" >
+
+  
+</div>
