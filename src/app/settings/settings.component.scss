@@ -1,7 +1,36 @@
-.row {
-    display: flex;
+form {
+    font-size: 1.5em;
+    width: 70%;
+    margin: 0 auto;
+    select, input{
+        background: #ffffff;
+        margin: 0.2em;
+        padding: 0.2em;
+        font-size: 0.9em;
+    }
+    input {  
+        width: 2em;
+    }
+    select {  
+        width: 100%;
+    }
+    
+    div, button {
+        font-size: 0.9em;
+    }
 }
-.col{
-    display: flex;
-    flex-direction: column;
+
+.generate {
+    margin: 1em 0 1.2em 0;
+}
+.center {
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0.1em;
+    align-items: center;
+    margin-top: 1.5em;
 }
