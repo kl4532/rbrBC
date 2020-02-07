@@ -17,6 +17,7 @@ export class SettingsComponent implements OnInit {
   dataUrl: string = '../assets/records.json';
 
   settingsForm: FormGroup;
+  generated: boolean;
   constructor(private http: HttpClient, private fb:FormBuilder) {}
 
   private get selectedTracks(){
@@ -64,6 +65,7 @@ export class SettingsComponent implements OnInit {
   }
 
   generateTracks() {
+    this.generated = true;
     let stages = this.settingsForm.controls.stages.value;
 
     this.http.get(this.dataUrl)
