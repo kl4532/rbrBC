@@ -17,8 +17,7 @@ export class SettingsComponent implements OnInit {
   dataUrl: string = '../assets/records.json';
 
   settingsForm: FormGroup;
-  constructor(private http: HttpClient, private fb:FormBuilder) { 
-  }
+  constructor(private http: HttpClient, private fb:FormBuilder) {}
   
   ngOnInit() {
     this.settingsForm = new FormGroup({
@@ -27,25 +26,46 @@ export class SettingsComponent implements OnInit {
       lMin: new FormControl('3'),
       lMax: new FormControl('8'),
       stages: new FormControl('5'),
-      // selectedTracks: new FormGroup({
-      // })
-      // tracks: this.fb.array([]) ,
+      selectedTracks: this.fb.array([]),
+      //Need to add one more nested array or formGroup with stats object inside
+      // selectedTracks: this.fb.array([
+      //   this.fb.group({
+      //     stage: "",
+      //     record: "",
+      //     length: "",
+      //     type: "G"
+      //   })
+      // ])
     });
   }
 
+  addNewTrack(track) {
+    let control = <FormArray>this.settingsForm.controls.selectedTracks;
+    control.push(
+      this.fb.control(track)
+    )
+  }
+  
+  deleteTrack(index) {
+    let control = <FormArray>this.settingsForm.controls.selectedTracks;
+    control.removeAt(index);
+  }
+
   generateTracks() {
+    let stages = this.settingsForm.controls.stages.value;
+    let selectedTracks = this.settingsForm.controls.selectedTracks;
+
     this.http.get(this.dataUrl)
       .subscribe((data: Object[])=>{
-        let stages = this.settingsForm.controls.stages.value;
         this.allTracks = data;
-        this.tracks = this.drawNoRep(data, stages);
-        this.tracks.forEach((track, index)=>{
-          this.settingsForm.removeControl(`${index}`);
-          this.settingsForm.addControl(`${index}`, new FormControl(`${track['Stage']}`));
+        this.tracks = this.drawNoRep(this.allTracks, stages);
+        if(selectedTracks.value.length > 0) {
+          let array = <FormArray>this.settingsForm.controls.selectedTracks;
+          array.clear();
+        };
+        this.tracks.forEach((track)=>{
+          this.addNewTrack(`${track['Stage']}`);
         })
-        // (<FormGroup>this.addressGroup).removeControl(`${index}`);
-        // (<FormGroup>this.addressGroup).addControl(`${index}`, new FormControl(`${track['Stage']}`));
-        console.log(this.tracks);
       })
     
     // add mock table with data
