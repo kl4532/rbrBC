@@ -26,23 +26,21 @@ export class SettingsComponent implements OnInit {
       lMin: new FormControl('3'),
       lMax: new FormControl('8'),
       stages: new FormControl('5'),
-      selectedTracks: this.fb.array([]),
+      // selectedTracks: this.fb.array([]),
       //Need to add one more nested array or formGroup with stats object inside
-      // selectedTracks: this.fb.array([
-      //   this.fb.group({
-      //     stage: "",
-      //     record: "",
-      //     length: "",
-      //     type: "G"
-      //   })
-      // ])
+      selectedTracks: this.fb.array([])
     });
   }
 
   addNewTrack(track) {
     let control = <FormArray>this.settingsForm.controls.selectedTracks;
     control.push(
-      this.fb.control(track)
+      this.fb.group({
+        stage: track.Stage,
+        record: track.Time,
+        length: track.Length,
+        type: track['Track type'],
+      })
     )
   }
   
@@ -64,16 +62,20 @@ export class SettingsComponent implements OnInit {
           array.clear();
         };
         this.tracks.forEach((track)=>{
-          this.addNewTrack(`${track['Stage']}`);
+          this.addNewTrack(track);
         })
       })
     
     // add mock table with data
     // let stages = this.settingsForm.controls.stages.value;
     // this.allTracks = this.mock;
-    // this.tracks = this.drawNoRep(this.mock, stages);
-    // this.tracks.forEach((track, index)=>{
-    //   this.settingsForm.addControl(`${index}`, new FormControl(`${track['Stage']}`));
+    // this.tracks = this.drawNoRep(this.allTracks, stages);
+    // if(selectedTracks.value.length > 0) {
+    //   let array = <FormArray>this.settingsForm.controls.selectedTracks;
+    //   array.clear();
+    // };
+    // this.tracks.forEach((track)=>{
+    //   this.addNewTrack(track);
     // })
   }
 

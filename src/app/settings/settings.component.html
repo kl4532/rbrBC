@@ -39,19 +39,21 @@
     <button type="button" (click)="generateTracks()">Generate tracks</button>
   </div>
 
-  <div class="tracks" *ngIf = "1" class="center" formArrayName="selectedTracks">
+  <div class="tracks" class="center" formArrayName="selectedTracks" >
     <h3>Tracks</h3>
-    <select 
-      formControlName="{{ i }}" 
-      class="col"  
-      name="tracks" 
-      id="{{ i }}" 
-      *ngFor="let tr of settingsForm.get('selectedTracks').controls; let i= index">
-        <option 
-          *ngFor="let trA of allTracks" 
-          [value]="trA.Stage">{{ trA.Stage }}
-        </option>
-    </select>
+      <ng-container 
+        *ngFor="let tr of settingsForm.get('selectedTracks').controls; let i= index" 
+        [formGroupName]="i"> 
+          <select 
+            formControlName = "stage"
+            name="tracks">
+              <option *ngFor="let trA of allTracks">
+                {{ trA.Stage }}
+              </option>
+          </select>
+      </ng-container>
+    
+    
   </div>
 
   <div class="center">
