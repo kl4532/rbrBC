@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormArray, FormBuilder} from '@angular/forms';
 
@@ -18,6 +18,10 @@ export class SettingsComponent implements OnInit {
 
   settingsForm: FormGroup;
   constructor(private http: HttpClient, private fb:FormBuilder) {}
+
+  private get selectedTracks(){
+    return <FormArray>this.settingsForm.get('selectedTracks')
+  }
   
   ngOnInit() {
     this.settingsForm = new FormGroup({
@@ -32,9 +36,20 @@ export class SettingsComponent implements OnInit {
     });
   }
 
+  resetControl(form, i) {
+    const newStageName = form.value.stage;
+    const changed = this.allTracks.find(obj => obj['Stage'] === newStageName);
+    const controlToChange = <FormArray>this.settingsForm.controls.selectedTracks.get(`${i}`);
+    controlToChange.reset({
+      stage: changed['Stage'],
+      record: changed['Time'],
+      length: changed['Length'],
+      type: changed['Track type']
+    });
+  }
+
   addNewTrack(track) {
-    let control = <FormArray>this.settingsForm.controls.selectedTracks;
-    control.push(
+    this.selectedTracks.push(
       this.fb.group({
         stage: track.Stage,
         record: track.Time,
@@ -45,20 +60,18 @@ export class SettingsComponent implements OnInit {
   }
   
   deleteTrack(index) {
-    let control = <FormArray>this.settingsForm.controls.selectedTracks;
-    control.removeAt(index);
+    this.selectedTracks.removeAt(index);
   }
 
   generateTracks() {
     let stages = this.settingsForm.controls.stages.value;
-    let selectedTracks = this.settingsForm.controls.selectedTracks;
 
     this.http.get(this.dataUrl)
       .subscribe((data: Object[])=>{
         this.allTracks = data;
         this.tracks = this.drawNoRep(this.allTracks, stages);
-        if(selectedTracks.value.length > 0) {
-          let array = <FormArray>this.settingsForm.controls.selectedTracks;
+        if(this.selectedTracks.value.length > 0) {
+          let array = this.selectedTracks;
           array.clear();
         };
         this.tracks.forEach((track)=>{
@@ -67,10 +80,10 @@ export class SettingsComponent implements OnInit {
       })
     
     // add mock table with data
-    // let stages = this.settingsForm.controls.stages.value;
+  
     // this.allTracks = this.mock;
     // this.tracks = this.drawNoRep(this.allTracks, stages);
-    // if(selectedTracks.value.length > 0) {
+    // if(this.selectedTracks.value.length > 0) {
     //   let array = <FormArray>this.settingsForm.controls.selectedTracks;
     //   array.clear();
     // };
@@ -98,7 +111,7 @@ export class SettingsComponent implements OnInit {
         }
       }
       includes ? 0 : drawed.push(track);
-      includes = false; // fuck, i forgot to reset it.. which caused endless loop
+      includes = false;
       if(loopGuard > 20)break;
     }
     return drawed;

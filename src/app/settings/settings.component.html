@@ -10,14 +10,14 @@
       <option *ngFor="let surf of surface" [value]="surf">{{ surf }}</option>
     </select>
           
-    <label for="lenght">Track lenght [km]</label>
+    <label for="length">Track length [km]</label>
     <div></div>
     <label for="lmin">Min</label>
     <input 
       formControlName="lMin" 
       type="number" 
       name="lmin" 
-      id="lenght-min" 
+      id="length-min" 
       min="1" 
       max="{{ settingsForm.controls.lMax.value }}">
     <label for="lmax">Max</label>
@@ -25,7 +25,7 @@
       formControlName="lMax" 
       type="number" 
       name="lmax" 
-      id="lenght-max" 
+      id="length-max" 
       min="{{ settingsForm.controls.lMin.value }}" 
       max="50">
 
@@ -39,23 +39,22 @@
     <button type="button" (click)="generateTracks()">Generate tracks</button>
   </div>
 
-  <div class="tracks" class="center" formArrayName="selectedTracks" >
+  <div class="center">
     <h3>Tracks</h3>
-      <ng-container 
-        *ngFor="let tr of settingsForm.get('selectedTracks').controls; let i= index" 
-        [formGroupName]="i"> 
-          <select 
-            formControlName = "stage"
-            name="tracks"
-            *ngFor="let trA of allTracks">
-            <!-- Selecting change only a name, other properties remain the same. Need to be fixed -->
-              <option >
-                {{ trA.Stage }}
-              </option>
-          </select>
-      </ng-container>
-    
-    
+  </div>
+  <div class="tracks" class="center" formArrayName="selectedTracks" *ngFor="let tr of settingsForm.get('selectedTracks').controls; let i= index">
+    <div [formGroupName]="i">
+      <select 
+        formControlName="stage" 
+        name="tracks" 
+        id="{{ i }}"
+        (change)="resetControl(tr, i)">
+          <option 
+            *ngFor="let trA of allTracks" 
+            [value]="trA.Stage">{{ trA.Stage }}
+          </option>
+      </select>
+    </div>
   </div>
 
   <div class="center">
