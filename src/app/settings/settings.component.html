@@ -46,8 +46,10 @@
         [formGroupName]="i"> 
           <select 
             formControlName = "stage"
-            name="tracks">
-              <option *ngFor="let trA of allTracks">
+            name="tracks"
+            *ngFor="let trA of allTracks">
+            <!-- Selecting change only a name, other properties remain the same. Need to be fixed -->
+              <option >
                 {{ trA.Stage }}
               </option>
           </select>
