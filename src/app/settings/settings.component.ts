@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormArray, FormBuilder} from '@angular/forms';
+import { map, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-settings',
@@ -10,8 +11,15 @@ import { FormGroup, FormControl, FormArray, FormBuilder} from '@angular/forms';
 export class SettingsComponent implements OnInit {
 
   difficulty = ['100', '80', '70', '60', '50', '40'];
-  surface = ['Mixed', 'Tarmac', 'Gravel', 'Snow'];
+  surface = ['All', 'Tarmac', 'Gravel', 'Snow'];
   stages = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+  countries = [
+    'All', 'Argentina', 'Australia', 'Austria', 'Czech Republic', 
+    'Estonia', 'Finland', 'France', 'Germany', 'Great Britain',
+    'Ireland', 'Italy', 'Japan', 'Lithuania', 'Netherlands',
+    'Poland', 'Portugal', 'Slovakia', 'Spain', 'Sweden', 'Switzerland',
+    'Ukraine', 'USA'
+  ]
   tracks: Object[] = [];
   allTracks: Object[] = [];
   dataUrl: string = '../assets/records.json';
@@ -27,12 +35,11 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {
     this.settingsForm = new FormGroup({
       difficulty: new FormControl('50'),
-      surface: new FormControl('Mixed'),
+      surface: new FormControl('All'),
       lMin: new FormControl('3'),
       lMax: new FormControl('8'),
       stages: new FormControl('5'),
-      // selectedTracks: this.fb.array([]),
-      //Need to add one more nested array or formGroup with stats object inside
+      country: new FormControl('All'),
       selectedTracks: this.fb.array([])
     });
   }
@@ -45,7 +52,7 @@ export class SettingsComponent implements OnInit {
       stage: changed['stage'],
       record: changed['record'],
       length: changed['length'],
-      type: changed['surface'],
+      surface: changed['surface'],
       country: changed['country']
     });
   }
@@ -56,7 +63,7 @@ export class SettingsComponent implements OnInit {
         stage: track.stage,
         record: track.record,
         length: track.length,
-        type: track.surface,
+        surface: track.surface,
         country: track.country
       })
     )
@@ -69,9 +76,18 @@ export class SettingsComponent implements OnInit {
   generateTracks() {
     this.generated = true;
     let stages = this.settingsForm.controls.stages.value;
-
+    // Now its time to implement filters
     this.http.get(this.dataUrl)
-      .subscribe((data: Object[])=>{
+      .pipe(
+        map(
+          (results: Object[]) => {
+            const selCountry = this.settingsForm.controls.country.value;
+            if(selCountry === "All") return results; 
+            return results.filter(obj => obj.country === selCountry)
+          }
+        )
+      )
+      .subscribe((data)=>{
         this.allTracks = data;
         this.tracks = this.drawNoRep(this.allTracks, stages);
         if(this.selectedTracks.value.length > 0) {
@@ -99,13 +115,7 @@ export class SettingsComponent implements OnInit {
   onSubmit() {
     console.log(this.settingsForm);
   }
-
-    // "stage": "Rallysprint Hondarribia 2011",
-  // "length": 8,
-  // "surface": "Tarmac",
-  // "record": "05:15.51",
-  // "country": "Spain"
-
+  
   drawNoRep(arr: Object[], quantity) {
     let drawed = [];
     let includes = false;

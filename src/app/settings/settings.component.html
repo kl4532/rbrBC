@@ -9,6 +9,11 @@
     <select formControlName="surface" name="surface" id="surface">
       <option *ngFor="let surf of surface" [value]="surf">{{ surf }}</option>
     </select>
+
+    <label for="country">Country</label>
+    <select formControlName="country" name="country" id="country">
+      <option *ngFor="let count of countries" [value]="count">{{ count }}</option>
+    </select>
           
     <label for="length">Track length [km]</label>
     <div></div>
