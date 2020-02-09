@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-general',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneralComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private srv: DataService) { }
+  selectedTracks;
+  tracksForm: FormGroup;
+  
   ngOnInit() {
+    this.tracksForm = this.srv.getTracks();
+    if(this.tracksForm){
+      this.selectedTracks = this.tracksForm.value.selectedTracks;
+      console.log(this.selectedTracks);
+    }
   }
+
+
 
 }

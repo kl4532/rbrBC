@@ -2,6 +2,8 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormArray, FormBuilder} from '@angular/forms';
 import { map, filter } from 'rxjs/operators';
+import { DataService } from '../services/data.service';
+// import {ServiceService } from '../services/service.service.ts'
 
 @Component({
   selector: 'app-settings',
@@ -26,7 +28,7 @@ export class SettingsComponent implements OnInit {
 
   settingsForm: FormGroup;
   generated: boolean;
-  constructor(private http: HttpClient, private fb:FormBuilder) {}
+  constructor(private http: HttpClient, private fb:FormBuilder, private srv: DataService) {}
 
   private get selectedTracks(){
     return <FormArray>this.settingsForm.get('selectedTracks')
@@ -83,11 +85,11 @@ export class SettingsComponent implements OnInit {
           (results: Object[]) => {
             const selCountry = this.settingsForm.controls.country.value;
             if(selCountry === "All") return results; 
-            return results.filter(obj => obj.country === selCountry)
+            return results.filter(obj => obj['country'] === selCountry)
           }
         )
       )
-      .subscribe((data)=>{
+      .subscribe((data:Object[])=>{
         this.allTracks = data;
         this.tracks = this.drawNoRep(this.allTracks, stages);
         if(this.selectedTracks.value.length > 0) {
@@ -113,7 +115,8 @@ export class SettingsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.settingsForm);
+    console.log('Submited');
+    this.srv.setTracks(this.settingsForm);
   }
   
   drawNoRep(arr: Object[], quantity) {
