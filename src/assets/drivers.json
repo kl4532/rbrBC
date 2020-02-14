@@ -1,0 +1,50 @@
+{
+    "WRC": [
+        {
+            "name": "Thierry Neuville",
+            "talent": 1
+        },
+        {
+            "name": "Ott Tänak",
+            "talent": 1
+        },
+        {
+            "name": "Sébastien Ogier",
+            "talent": 1
+        },
+        {
+            "name": "Elfyn Evans",
+            "talent": 2
+        },
+        {
+            "name": "Esapekka Lappi",
+            "talent": 2
+        },
+        {
+            "name": "Teemu Suninen",
+            "talent": 3
+        },
+        {
+            "name": "Takamoto Katsuta",
+            "talent": 2
+        },
+        {
+            "name": "Eric Camilli",
+            "talent": 3
+        },
+        {
+            "name": "Gus Greensmith",
+            "talent": 3
+        }
+    ],
+    "WRC2": [
+        {
+            "name": "Mads Østberg",
+            "talent": 3
+        },
+        {
+            "name": "Kajetan Kajetanowicz",
+            "talent": 3
+        }
+    ]
+}
