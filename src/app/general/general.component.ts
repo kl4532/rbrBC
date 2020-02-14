@@ -13,22 +13,33 @@ export class GeneralComponent implements OnInit {
   drivers: Driver[] = [];
 
   selectedTracks;
-  tracksForm: FormGroup;
+  settingsForm: FormGroup;
   started = false;
+  allDriversResults;
 
   constructor(private srv: DataService) { }
 
   ngOnInit() {
-    this.tracksForm = this.srv.getTracks();
-    if(this.tracksForm){
-      this.selectedTracks = this.tracksForm.value.selectedTracks;
+    this.settingsForm = this.srv.getSettings();
+    if(this.settingsForm){
+      this.selectedTracks = this.settingsForm.value.selectedTracks;
       console.log(this.selectedTracks);
     }
-    this.srv.getDrivers()
-      .subscribe(data => {
-        console.log(data);
-        this.drivers = data.WRC;
+    this.srv.getDrivers("WRC")
+      .subscribe(dws => this.drivers = dws);
+  }
+  start() {
+    this.drivers
+      .forEach(dw => {
+        this.selectedTracks
+          .forEach(stage => {
+            dw['stages'].push(this.srv.setStageTimes(dw.talent, stage))
+          })
       })
+    this.started = true;
+  }
+  logDrivers() {
+    console.log(this.drivers);
   }
 
 

@@ -11,7 +11,6 @@ import { DataService } from '../services/data.service';
 })
 export class SettingsComponent implements OnInit {
 
-  difficulty = ['100', '80', '70', '60', '50', '40'];
   surface = ['All', 'Tarmac', 'Gravel', 'Snow'];
   stages = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
   countries = [
@@ -104,7 +103,7 @@ export class SettingsComponent implements OnInit {
 
   onSubmit() {
     console.log('Submited');
-    this.srv.setTracks(this.settingsForm);
+    this.srv.setSettings(this.settingsForm);
   }
   
   drawNoRep(arr: Object[], quantity) {

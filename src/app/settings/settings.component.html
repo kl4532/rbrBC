@@ -1,9 +1,13 @@
 <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
   <div class="wrapper">
     <label for="difficulty">Difficulty</label>
-    <select name="difficulty" id="difficulty" formControlName="difficulty">
-      <option *ngFor="let diff of difficulty" [value]="diff">{{ diff }}</option>
-    </select>
+    <input 
+      formControlName="difficulty" 
+      type="number" 
+      name="difficulty" 
+      id="difficulty" 
+      min="10" 
+      max="100">
 
     <label for="surface">Surface</label>
     <select formControlName="surface" name="surface" id="surface">

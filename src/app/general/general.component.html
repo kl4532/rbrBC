@@ -1,24 +1,29 @@
 <div class="start" *ngIf="selectedTracks, else submitInput">
-    <button (click)="started = true">Start tournament</button>
+    <button (click)="start()">Start tournament</button>
 </div>
 
 <ng-template #submitInput>
     <h2>Please, select and submit tracks in settings tab</h2>
 </ng-template>
 
-<div class="table" *ngIf="started">
-    <h1>Stage X</h1>
-    <table >
-        <tr>
-          <th>Name</th>
-          <th>Time</th>
-          <th>Gap</th>
-          <th>Total</th>
-        </tr>
-        <tr *ngFor="let driver of drivers">
-            <td>{{ driver.name }}</td>
-            <td>Time</td>
-            <td>Gap</td>
-        </tr>
-    </table>
+
+<div class="table" *ngIf="drivers && started">
+    <ng-container *ngFor="let stage of selectedTracks; index as i">
+        <h1>SS {{ i + 1 }} - {{stage.stage }} ({{stage.record}})</h1>
+        <table >
+            <tr>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Gap</th>
+                <th>Total</th>
+            </tr>
+            <tr *ngFor="let driver of drivers">
+                <td>{{ driver.name }}</td>
+                <td>{{ driver.stages[i].timeString }}</td>
+                <td><button (click)="logDrivers()">LOG</button></td>
+            </tr>
+        </table>
+    </ng-container>
 </div>
+
+
