@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { map, throwIfEmpty } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { crashReporter } from 'electron';
-
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,34 +9,63 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  settings: FormGroup;
+  submitedSettings: FormGroup;
+  recordsUrl: string = '../assets/records.json';
+  driversUrl: string = '../../assets/drivers.json';
+
   setSettings(data) {
-    this.settings = data;
+    this.submitedSettings = data;
   }
   getSettings() {
-    return this.settings;
+    return this.submitedSettings;
   }
   getDrivers(category){
-    return this.http.get('../../assets/drivers.json')
+    return this.http.get(this.driversUrl)
       .pipe(
         map(cat => cat[category]
         )
       );
   }
+  filterStages(presetForm) {
+    return this.http.get(this.recordsUrl)
+      .pipe(
+        map(
+          (results: Object[]) => {
+            const selCountry = presetForm.controls.country.value;
+            const selSurface = presetForm.controls.surface.value;
+            const lMin = presetForm.controls.lMin.value;
+            const lMax = presetForm.controls.lMax.value;
+            return results
+              .filter(obj => {
+                if(selCountry === "All") return true;
+                return obj['country'] === selCountry;
+              })
+              .filter(obj => {
+                if(selSurface === "All") return true;
+                return obj['surface'] === selSurface;
+              })
+              .filter(obj => {
+                return (obj['length'] >= lMin && obj['length'] <= lMax );
+              })
+          }
+        )
+      )
+  }
+
   timeToSeconds(time: string): number {
     return parseInt(time.substring(0,2))*60 + parseFloat(time.substring(3));
   }
-  timeToString(time:number) {
+  timeToString(time:number): string {
     let minutes: any = (time/60) | 0;
     let seconds = time%60
     minutes<10 ? minutes = "0" + minutes  : 0;
     return  minutes + ":" + seconds.toFixed(2);
   }
 
-  setStageTimes(talent, stage) {
+  setStageTimes(talent, stage): Object {
     let timeSeconds;
     let crash: boolean;
-    let difficulty = this.settings.controls.difficulty.value;
+    let difficulty = this.submitedSettings.controls.difficulty.value;
 
     console.log(difficulty);
 
@@ -68,7 +94,7 @@ export class DataService {
       crash: crash
     }
   }
-  getRandomInt(min, max) {
+  getRandomInt(min, max): number {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
