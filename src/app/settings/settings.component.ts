@@ -1,7 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormControl, FormArray, FormBuilder} from '@angular/forms';
-import { map, filter } from 'rxjs/operators';
+import { FormGroup, FormControl, FormArray, FormBuilder, Validators} from '@angular/forms';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -22,11 +20,12 @@ export class SettingsComponent implements OnInit {
   ]
   tracks: Object[] = [];
   allTracks: Object[] = [];
-  dataUrl: string = '../assets/records.json';
-
   settingsForm: FormGroup;
   generated: boolean;
-  constructor(private http: HttpClient, private fb:FormBuilder, private srv: DataService) {}
+
+  constructor( 
+    private fb:FormBuilder, 
+    private srv: DataService) {}
 
   private get selectedTracks(){
     return <FormArray>this.settingsForm.get('selectedTracks')
@@ -37,10 +36,10 @@ export class SettingsComponent implements OnInit {
       difficulty: new FormControl('50'),
       surface: new FormControl('All'),
       lMin: new FormControl('3'),
-      lMax: new FormControl('8'),
+      lMax: new FormControl('11'),
       stages: new FormControl('5'),
       country: new FormControl('All'),
-      selectedTracks: this.fb.array([])
+      selectedTracks: this.fb.array([], Validators.required)
     });
   }
 
@@ -68,46 +67,20 @@ export class SettingsComponent implements OnInit {
       })
     )
   }
-  
-  deleteTrack(index) {
-    this.selectedTracks.removeAt(index);
-  }
 
   generateTracks() {
     this.generated = true;
     let stages = this.settingsForm.controls.stages.value;
-    // Now its time to implement filters
-    this.http.get(this.dataUrl)
-      .pipe(
-        map(
-          (results: Object[]) => {
-            const selCountry = this.settingsForm.controls.country.value;
-            const selSurface = this.settingsForm.controls.surface.value;
-            const lMin = this.settingsForm.controls.lMin.value;
-            const lMax = this.settingsForm.controls.lMax.value;
+    this.selectedTracks.clear();
 
-            return results
-              .filter(obj => {
-                if(selCountry === "All") return true;
-                return obj['country'] === selCountry;
-              })
-              .filter(obj => {
-                if(selSurface === "All") return true;
-                return obj['surface'] === selSurface;
-              })
-              .filter(obj => {
-                return (obj['length'] >= lMin && obj['length'] <= lMax );
-              })
-          }
-        )
-      )
+    this.srv.filterStages(this.settingsForm)
       .subscribe((data:Object[])=>{
         this.allTracks = data;
-        this.tracks = this.allTracks.length>0 ? this.drawNoRep(this.allTracks, stages) : [];
-        if(this.selectedTracks.value.length > 0) {
-          let array = this.selectedTracks;
-          array.clear();
-        };
+        this.tracks = this.allTracks.length > 0 ? this.drawNoRep(this.allTracks, stages) : [];
+        // if(this.selectedTracks.value.length > 0) {
+        //   let array = this.selectedTracks;
+        //   array.clear();
+        // };
         this.tracks.forEach((track)=>{
           this.addNewTrack(track);
         })
@@ -116,6 +89,7 @@ export class SettingsComponent implements OnInit {
 
   onSubmit() {
     console.log('Submited');
+    console.log(this.settingsForm);
     this.srv.setSettings(this.settingsForm);
   }
   
@@ -125,7 +99,7 @@ export class SettingsComponent implements OnInit {
     let loopGuard = 0;
 
     while(drawed.length<quantity) {
-      let track = arr[this.getRandomInt(0, arr.length)];
+      let track = arr[this.srv.getRandomInt(0, arr.length)];
       for(let i=0; i<drawed.length; i++){
         if(track['stage'] === drawed[i].stage) {
           includes = true;
@@ -138,12 +112,6 @@ export class SettingsComponent implements OnInit {
       if(loopGuard > 20)break;
     }
     return drawed;
-  }
-
-  getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   }
 
 }
