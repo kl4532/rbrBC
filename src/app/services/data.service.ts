@@ -55,6 +55,7 @@ export class DataService {
   timeToSeconds(time: string): number {
     return parseInt(time.substring(0,2))*60 + parseFloat(time.substring(3));
   }
+  
   timeToString(time:number): string {
     let minutes: any = (time/60) | 0;
     let seconds = time%60
@@ -66,8 +67,6 @@ export class DataService {
     let timeSeconds;
     let crash: boolean;
     let difficulty = this.submitedSettings.controls.difficulty.value;
-
-    console.log(difficulty);
 
     switch (talent) {
       case 1:
