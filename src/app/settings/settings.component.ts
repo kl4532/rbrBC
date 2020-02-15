@@ -82,15 +82,28 @@ export class SettingsComponent implements OnInit {
         map(
           (results: Object[]) => {
             const selCountry = this.settingsForm.controls.country.value;
-            if(selCountry === "All") return results; 
+            const selSurface = this.settingsForm.controls.surface.value;
+            const lMin = this.settingsForm.controls.lMin.value;
+            const lMax = this.settingsForm.controls.lMax.value;
+
             return results
-              .filter(obj => obj['country'] === selCountry)
+              .filter(obj => {
+                if(selCountry === "All") return true;
+                return obj['country'] === selCountry;
+              })
+              .filter(obj => {
+                if(selSurface === "All") return true;
+                return obj['surface'] === selSurface;
+              })
+              .filter(obj => {
+                return (obj['length'] >= lMin && obj['length'] <= lMax );
+              })
           }
         )
       )
       .subscribe((data:Object[])=>{
         this.allTracks = data;
-        this.tracks = this.drawNoRep(this.allTracks, stages);
+        this.tracks = this.allTracks.length>0 ? this.drawNoRep(this.allTracks, stages) : [];
         if(this.selectedTracks.value.length > 0) {
           let array = this.selectedTracks;
           array.clear();
