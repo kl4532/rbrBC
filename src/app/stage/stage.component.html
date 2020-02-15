@@ -1,28 +1,31 @@
-<div class="start" *ngIf="selectedTracks, else submitInput">
-    <button (click)="start()">Start tournament</button>
+<div class="start" *ngIf="selectedTracks && !started">
+    <button (click)="init()">Start tournament</button>
 </div>
 
-<ng-template #submitInput>
-    <h2>Please, select and submit tracks in settings tab</h2>
-</ng-template>
+<h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in settings tab</h2>
 
-
-<div class="table" *ngIf="drivers && started">
+<div class="table" *ngIf="drivers.length > 0 && started">
+    <button *ngIf="currentStage < settingsForm.value.stages" (click)=submitResults()>Submit</button>
     <ng-container *ngFor="let stage of selectedTracks; index as i">
-        <h1>SS {{ i + 1 }} - {{stage.stage }} ({{stage.record}})</h1>
-        <table >
-            <tr>
-                <th>Name</th>
-                <th>Time</th>
-                <th>Gap</th>
-                <th>Total</th>
-            </tr>
-            <tr *ngFor="let driver of drivers">
-                <td>{{ driver.name }}</td>
-                <td>{{ driver.stages[i].timeString }}</td>
-                <td><button (click)="logDrivers()">LOG</button></td>
-            </tr>
-        </table>
+        <ng-container *ngIf="i===currentStage || displayAllStages">
+            <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}})</h1>
+            <table >
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Gap</th>
+                    <th>Total</th>
+                </tr>
+                <tr *ngFor="let driver of drivers">
+                    <td>{{ driver.name }}</td>
+                    <td>{{ driver.stages[i].timeString }}</td>
+                    <td><button (click)="logDrivers()">LOG</button></td>
+                </tr>
+            </table>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="currentStage == settingsForm.value.stages">
+        THE END, <button (click)="displayAllStages = true">Display all stages</button>
     </ng-container>
 </div>
 

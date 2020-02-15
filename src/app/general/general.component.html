@@ -1,1 +1,17 @@
-<h3>general works</h3>
+<div class="table" *ngIf="drivers">
+    <ng-container>
+        <h1>General classification after {{currentStage}} stages</h1>
+        <table >
+            <tr>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Gap</th>
+            </tr>
+            <tr *ngFor="let driver of drivers">
+                <td>{{ driver.name }}</td>
+                <td>{{ driver.totalTimeString }}</td>
+                <th>{{ driver.totalTimeSeconds }}</th>
+            </tr>
+        </table>
+    </ng-container>
+</div>

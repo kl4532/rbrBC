@@ -5,72 +5,72 @@
             "name": "Thierry Neuville",
             "talent": 1,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 2,
             "name": "Ott Tänak",
             "talent": 1,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {   
             "id": 3,
             "name": "Sébastien Ogier",
             "talent": 1,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 4,
             "name": "Elfyn Evans",
             "talent": 2,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 5,
             "name": "Esapekka Lappi",
             "talent": 2,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 6,
             "name": "Teemu Suninen",
             "talent": 3,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 7,
             "name": "Takamoto Katsuta",
             "talent": 2,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 8,
             "name": "Eric Camilli",
             "talent": 3,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 9,
             "name": "Gus Greensmith",
             "talent": 3,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         }
     ],
     "WRC2": [
@@ -79,16 +79,16 @@
             "name": "Mads Østberg",
             "talent": 3,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         },
         {
             "id": 11,
             "name": "Kajetan Kajetanowicz",
             "talent": 3,
             "stages": [],
-            "totalTimeSeconds?": 0,
-            "totalTimeString?": "" 
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
         }
     ]
 }

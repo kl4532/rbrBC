@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Subject, Observable, BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +13,8 @@ export class DataService {
   submitedSettings: FormGroup;
   recordsUrl: string = '../assets/records.json';
   driversUrl: string = '../../assets/drivers.json';
+
+  private stageData = new BehaviorSubject<Object>([]);
 
   setSettings(data) {
     this.submitedSettings = data;
@@ -55,7 +58,7 @@ export class DataService {
   timeToSeconds(time: string): number {
     return parseInt(time.substring(0,2))*60 + parseFloat(time.substring(3));
   }
-  
+
   timeToString(time:number): string {
     let minutes: any = (time/60) | 0;
     let seconds = time%60
@@ -97,5 +100,15 @@ export class DataService {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  }
+
+  sendTotalResults(drivers: Driver[], currentStage, started) {
+      const data = {drivers: drivers, currentStage: currentStage, started: started}
+      this.stageData.next(data);
+      console.log("inSRV", data);
+  }
+
+  getTotalResults(): Observable<any> {
+      return this.stageData.asObservable();
   }
 }
