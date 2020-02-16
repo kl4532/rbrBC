@@ -55,6 +55,8 @@ export class StageComponent implements OnInit {
         dw.totalTimeSeconds = dw.totalTimeSeconds ? dw.totalTimeSeconds + dw.stages[index].timeSeconds : dw.stages[index].timeSeconds;
         dw.totalTimeString = this.srv.timeToString(dw.totalTimeSeconds);
       })
+    this.drivers.sort((a,b)=>a.stages[index+1].timeSeconds - b.stages[index+1].timeSeconds)
+    console.log(this.drivers);
     this.currentStage++;
   }
 
