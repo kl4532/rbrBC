@@ -27,9 +27,11 @@ export class StageComponent implements OnInit {
     this.srv.getTotalResults()
       .subscribe(data => {
         if(data.length === 0){
+          console.log("loadedInitial");
           this.srv.getDrivers("WRC")
-          .subscribe(dws => this.drivers = dws);
+            .subscribe(dws => this.drivers = dws);
         }else {
+          console.log("loadedPrevious");
           this.drivers = data.drivers;
           this.currentStage = data.currentStage
           this.started = data.started;
@@ -38,6 +40,7 @@ export class StageComponent implements OnInit {
   }
 
   init() {
+    console.log("currentStage", this.currentStage);
     this.started = true;
     this.drivers
       .forEach(dw => {
@@ -46,26 +49,34 @@ export class StageComponent implements OnInit {
             dw['stages'].push(this.srv.setStageTimes(dw.talent, stage))
           })
       })
+    this.playStage(0);
   }
 
   playStage(index) {
-    console.log("SIndex", this.currentStage);
     this.drivers
       .forEach(dw => {
         dw.totalTimeSeconds = dw.totalTimeSeconds ? dw.totalTimeSeconds + dw.stages[index].timeSeconds : dw.stages[index].timeSeconds;
         dw.totalTimeString = this.srv.timeToString(dw.totalTimeSeconds);
       })
-    this.drivers.sort((a,b)=>a.stages[index+1].timeSeconds - b.stages[index+1].timeSeconds)
-    console.log(this.drivers);
-    this.currentStage++;
+    this.drivers.sort((a,b)=>a.stages[index].timeSeconds - b.stages[index].timeSeconds);
+    this.drivers
+      .forEach((dw, i) => {
+        if(i==0){
+          dw.gap = "00:00"
+        } else{
+          dw.gap = this.srv.timeToString(dw.totalTimeSeconds - this.drivers[0].totalTimeSeconds); 
+        }
+      })
   }
 
-  logDrivers() {
-    console.log("log in stages",this.drivers);
-  }
+  //TODO implement player time input
+
 
   submitResults() {
-    this.playStage(this.currentStage);
+    this.currentStage++
+    if(this.currentStage < this.drivers[0].stages.length-1){
+      this.playStage(this.currentStage);
+    }
     this.srv.sendTotalResults(this.drivers, this.currentStage, this.started);
   }
 }

@@ -4,4 +4,5 @@ interface Driver {
     stages?: Stage[];
     totalTimeSeconds?: number;
     totalTimeString?: string; 
+    gap?: string;
 }

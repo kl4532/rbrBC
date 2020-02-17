@@ -19,7 +19,7 @@
                 <tr *ngFor="let driver of drivers">
                     <td>{{ driver.name }}</td>
                     <td>{{ driver.stages[i].timeString }}</td>
-                    <td><button (click)="logDrivers()">LOG</button></td>
+                    <td>{{ driver.stages[i].timeSeconds }}</td>
                 </tr>
             </table>
         </ng-container>

@@ -88,7 +88,6 @@ export class SettingsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Submited');
     console.log(this.settingsForm);
     this.srv.setSettings(this.settingsForm);
   }
