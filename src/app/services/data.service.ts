@@ -12,7 +12,7 @@ export class DataService {
 
   submitedSettings: FormGroup;
   recordsUrl: string = '../assets/records.json';
-  driversUrl: string = '../../assets/drivers.json';
+  driversUrl: string = '../assets/drivers.json';
 
   private stageData = new BehaviorSubject<Object>([]);
 
