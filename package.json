@@ -1,7 +1,9 @@
 {
-  "name": "rbrBC",
-  "version": "0.0.0",
+  "name": "rbr-bc",
+  "version": "0.5.0",
   "main": "electron/dist/main.js",
+  "author": "corny",
+  "description": "Application for generating rally stage times",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +11,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron": "ng build --base-href ./ && tsc --p electron && electron ."
+    "electron": "ng build --base-href ./ && tsc --p electron && electron .",
+    "dist": "electron-builder",
+    "dist:linux": "electron-builder --linux"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +27,7 @@
     "@angular/router": "~8.2.14",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "yarn": "^1.22.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -36,6 +41,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "electron": "^7.1.11",
+    "electron-builder": "^22.3.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -47,5 +53,28 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "build": {
+    "appId": "com.rbr-bc.app",
+    "productName": "RBR Bot Championship",
+    "target": "NSIS",
+    "directories": {
+      "output": "build"
+    },
+		"win": {
+			"target": [
+				{
+					"target": "portable",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			]
+		},
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
   }
 }
