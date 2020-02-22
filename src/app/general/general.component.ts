@@ -13,13 +13,15 @@ export class GeneralComponent implements OnInit, OnDestroy {
   drivers: Driver[];
   currentStage: number;
   subscription: Subscription;
+  player: Driver;
 
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
         this.drivers = data.drivers;
-        this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds)
-        this.currentStage = data.currentStage
+        this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
+        this.currentStage = data.currentStage;
+        this.player = data.player;
       })
   }
 

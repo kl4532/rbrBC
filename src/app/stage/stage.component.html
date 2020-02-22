@@ -5,7 +5,6 @@
 <h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in settings tab</h2>
 
 <div class="table" *ngIf="drivers.length > 0 && started">
-    <button *ngIf="currentStage < settingsForm.value.stages" (click)=submitResults()>Submit</button>
     <ng-container *ngFor="let stage of selectedTracks; index as i">
         <ng-container *ngIf="i===currentStage || displayAllStages">
             <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}})</h1>
@@ -13,8 +12,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Time</th>
-                    <th>Gap</th>
-                    <th>Total</th>
+                    <th>Timesec</th>
                 </tr>
                 <tr *ngFor="let driver of drivers">
                     <td>{{ driver.name }}</td>
@@ -24,6 +22,16 @@
             </table>
         </ng-container>
     </ng-container>
+    <ng-container *ngIf="currentStage < settingsForm.value.stages">
+        <table>
+            <tr>
+                <td>Player</td>
+                <td><input [(ngModel)]="playerStageTime" name="playerStageTime" type="text"></td>
+                <td><button (click)=submitResults()>Submit</button></td>
+            </tr>
+        </table>
+    </ng-container>
+
     <ng-container *ngIf="currentStage == settingsForm.value.stages">
         THE END, <button (click)="displayAllStages = true">Display all stages</button>
     </ng-container>

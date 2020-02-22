@@ -14,4 +14,11 @@
             </tr>
         </table>
     </ng-container>
+    <ng-container *ngIf="player">
+                <label>Player</label>
+                <p>{{player.totalTimeString}}</p>
+                <p>{{ player.gap }}</p>
+
+         
+    </ng-container>
 </div>
