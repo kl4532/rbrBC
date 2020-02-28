@@ -30,7 +30,11 @@ export class SettingsComponent implements OnInit {
   private get selectedTracks(){
     return <FormArray>this.settingsForm.get('selectedTracks')
   }
-  
+
+  private get selectedPlayers(){
+    return <FormArray>this.settingsForm.get('selectedPlayers')
+  }
+  // TODO add validator for player name input in selectedPlayers 
   ngOnInit() {
     this.settingsForm = new FormGroup({
       difficulty: new FormControl('50'),
@@ -39,7 +43,9 @@ export class SettingsComponent implements OnInit {
       lMax: new FormControl('11'),
       stages: new FormControl('5'),
       country: new FormControl('All'),
-      selectedTracks: this.fb.array([], Validators.required)
+      selectedTracks: this.fb.array([]),
+      players: new FormControl('1'),
+      selectedPlayers: this.fb.array([], [Validators.required])
     });
   }
 
@@ -72,19 +78,31 @@ export class SettingsComponent implements OnInit {
     this.generated = true;
     let stages = this.settingsForm.controls.stages.value;
     this.selectedTracks.clear();
-
+    this.selectedPlayers.clear();
     this.srv.filterStages(this.settingsForm)
       .subscribe((data:Object[])=>{
         this.allTracks = data;
         this.tracks = this.allTracks.length > 0 ? this.drawNoRep(this.allTracks, stages) : [];
-        // if(this.selectedTracks.value.length > 0) {
-        //   let array = this.selectedTracks;
-        //   array.clear();
-        // };
         this.tracks.forEach((track)=>{
           this.addNewTrack(track);
         })
       })
+    this.generatePlayers();
+    // this.settingsForm.get('selectedPlayers').controls.forEach( player =>{
+    //     console.log(player.value.name);
+    //   }
+    // )
+  }
+
+  generatePlayers() {
+    for(let i=0; i<this.settingsForm.controls.players.value; i++) {
+      this.selectedPlayers.push(
+        this.fb.group({
+          id: i,
+          name: "Player " + (i+1),
+        })
+      )
+    }
   }
 
   onSubmit() {

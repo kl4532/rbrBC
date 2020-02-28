@@ -42,6 +42,12 @@
     <select formControlName="stages" name="stages" id="stages">
       <option *ngFor="let st of stages" [value]="st">{{ st }}</option>
     </select>
+
+    <label for="players">Select players</label>
+    <select formControlName="players" name="players" id="players">
+      <option *ngFor="let number of [1,2,3,4]" [value]="number">{{ number }}</option>
+    </select>
+
   </div>
 
   <div class="center generate">
@@ -49,6 +55,17 @@
   </div>
 
   <div class="tracks" *ngIf="generated">
+
+    <label for="players_names">Name players</label>
+    <ng-container 
+      formArrayName="selectedPlayers" 
+      *ngFor = "let player of settingsForm.get('selectedPlayers').controls; let i= index">
+        <div [formGroupName]="i">
+          <input class="player_name" formControlName="name" type="text" [value]="player.value.name">
+        </div>
+    </ng-container>
+    
+
     <div class="center">
       <h3>Tracks</h3>
     </div>

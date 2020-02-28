@@ -26,6 +26,9 @@ form {
     div, button {
         font-size: 0.9em;
     }
+    input.player_name {
+        width: auto;
+    }
 }
 
 .generate {
