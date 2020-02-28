@@ -98,8 +98,14 @@ export class SettingsComponent implements OnInit {
     for(let i=0; i<this.settingsForm.controls.players.value; i++) {
       this.selectedPlayers.push(
         this.fb.group({
-          id: i,
+          id: i+100,
           name: "Player " + (i+1),
+          talent: 0,
+          stages: [],
+          totalTimeSeconds: 0,
+          totalTimeString: "",
+          gap: "0",
+          currentStageTime: "",
         })
       )
     }

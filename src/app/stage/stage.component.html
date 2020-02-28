@@ -1,5 +1,5 @@
-<div class="start" *ngIf="selectedTracks && !started">
-    <button (click)="init()">Start tournament</button>
+<div class="center" *ngIf="selectedTracks && !started">
+    <button class="btn-start" (click)="init()">Start tournament</button>
 </div>
 
 <h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in settings tab</h2>
@@ -22,18 +22,23 @@
             </table>
         </ng-container>
     </ng-container>
-    <ng-container *ngIf="currentStage < settingsForm.value.stages">
+    <form [formGroup]="settingsForm" (ngSubmit)="submitResults()" *ngIf="currentStage < settingsForm.value.stages">
         <table>
-            <tr>
-                <td>Player</td>
-                <td><input [(ngModel)]="playerStageTime" name="playerStageTime" type="text"></td>
-                <td><button (click)=submitResults()>Submit</button></td>
-            </tr>
+            <tr formArrayName="selectedPlayers" *ngFor="let player of settingsForm.get('selectedPlayers').controls; let i= index">
+                <ng-container [formGroupName]="i">
+                    <td>Player {{i+1}}</td>
+                    <td><input formControlName="currentStageTime" name="currentStageTime" type="text"></td>
+                </ng-container>
+            </tr> 
         </table>
-    </ng-container>
+        <div class="center">
+            <button class="btn-submit" type="submit">Submit</button>
+        </div>
+    </form>
 
     <ng-container *ngIf="currentStage == settingsForm.value.stages">
         THE END, <button (click)="displayAllStages = true">Display all stages</button>
+        <button (click)="playAgain()">Play again</button>
     </ng-container>
 </div>
 

@@ -59,7 +59,6 @@ export class DataService {
     let min = parseInt(time.substring(0,2))*60;
     let sec = parseFloat(time.substring(3))
     sec = Number.isNaN(sec) ? 0 : sec;
-    console.log("sec", sec);
     return min + sec;
   }
 
@@ -106,46 +105,36 @@ export class DataService {
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   }
 
-  sendTotalResults(drivers: Driver[], currentStage, started, player) {
-      const data = {drivers: drivers, currentStage: currentStage, started: started, player: player}
+  sendTotalResults(drivers: Driver[], currentStage, started, settingsForm) {
+      const data = {drivers: drivers, currentStage: currentStage, started: started, settingsForm: settingsForm}
       this.stageData.next(data);
-      console.log("inSRV", data);
   }
 
   getTotalResults(): Observable<any> {
       return this.stageData.asObservable();
   }
 
-  setPlayerStage(player, playerStageTime, drivers, currentStage, selectedTracks ): Driver{
-    let firstStage = currentStage === 0 ? true : false;
-    //set total values
-    if(firstStage) {
-      player = {
-        name: "Player",
-        talent: 0,
-        stages: [],
-        totalTimeSeconds: this.timeToSeconds(playerStageTime),
-        totalTimeString: playerStageTime,
-        gap: "0"
-      }
-    } else {
-      console.log("pl", player);
-      player.totalTimeSeconds = player.totalTimeSeconds + this.timeToSeconds(playerStageTime);
-      player.totalTimeString = this.timeToString(player.totalTimeSeconds);
-    }
-    player.gap = this.timeToString(drivers[0].totalTimeSeconds - player.totalTimeSeconds);
-    //set stage values
-    let stage = {
-      name: selectedTracks[currentStage].stage,
-      timeSeconds: this.timeToSeconds(playerStageTime),
-      timeString: playerStageTime,
-      crash: playerStageTime ? false : true
-    }
-    player.stages.push(stage)
-      // {name: "Loch Ard", timeSeconds: 366.4044, timeString: "06:6.40", crash: false}
-    console.log(`Player after ${currentStage} stage`, player);
-
-    return player;
-
+  setPlayersStageTimes(settingsForm, drivers, currentStage, selectedTracks ){
+    let players = settingsForm.controls.selectedPlayers.value;
+      players.forEach((player, i) => {
+        //set total values
+        player.totalTimeSeconds = player.totalTimeSeconds + this.timeToSeconds(player.currentStageTime);
+        player.totalTimeString = this.timeToString(player.totalTimeSeconds);
+        player.gap = this.timeToString(drivers[0].totalTimeSeconds - player.totalTimeSeconds);
+        
+        // set stage values
+        player.stages === null ? player.stages = [] : 0;
+        let stage = {
+          name: selectedTracks[currentStage].stage,
+          timeSeconds: this.timeToSeconds(player.currentStageTime),
+          timeString: player.currentStageTime,
+          crash: player.currentStageTime ? false : true
+        }
+        player.stages.push(stage)
+      });    
+      this.submitedSettings.patchValue({
+        selectedPlayers: players
+      });
+    return this.submitedSettings;
   }
 }

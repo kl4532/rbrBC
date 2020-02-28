@@ -16,13 +16,13 @@ export class StageComponent implements OnInit {
   started = false;
   currentStage: number = 0;
   displayAllStages = false;
-  playerStageTime: string = "0";
-  player: Driver;
 
-  constructor(private srv: DataService) { }
+  constructor(private srv: DataService) { 
+  }
 
   ngOnInit() {
     this.settingsForm = this.srv.getSettings();
+
     if(this.settingsForm){
       this.selectedTracks = this.settingsForm.value.selectedTracks;
     }
@@ -38,7 +38,6 @@ export class StageComponent implements OnInit {
           this.drivers = data.drivers;
           this.currentStage = data.currentStage
           this.started = data.started;
-          this.player = data.player;
         }
       })
   }
@@ -75,11 +74,15 @@ export class StageComponent implements OnInit {
   }
 
   submitResults() {
-    this.player = this.srv.setPlayerStage(this.player, this.playerStageTime, this.drivers, this.currentStage, this.selectedTracks)
+    this.srv.setPlayersStageTimes(this.settingsForm, this.drivers, this.currentStage, this.selectedTracks);
     this.currentStage++
     if(this.currentStage < this.drivers[0].stages.length-1){
       this.playStage(this.currentStage);
     }
-    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.player);
+    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
+  }
+
+  playAgain() {
+    // this.srv.setSettings([]);
   }
 }

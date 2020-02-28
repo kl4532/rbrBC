@@ -1,24 +1,24 @@
 <div class="table" *ngIf="drivers">
     <ng-container>
-        <h1>General classification after {{currentStage}} stages</h1>
+        <h1>General classification after {{currentStage}} stage[s]</h1>
         <table >
             <tr>
                 <th>Name</th>
                 <th>Time</th>
                 <th>Gap</th>
             </tr>
+
             <tr *ngFor="let driver of drivers">
                 <td>{{ driver.name }}</td>
                 <td>{{ driver.totalTimeString }}</td>
-                <th>{{ driver.gap }}</th>
+                <td>{{ driver.gap }}</td>
+            </tr>
+
+            <tr *ngFor="let player of players" class="players-table">
+                <td>{{ player.name }}</td>
+                <td>{{ player.totalTimeString }}</td>
+                <td>{{ player.gap }}</td>
             </tr>
         </table>
-    </ng-container>
-    <ng-container *ngIf="player">
-                <label>Player</label>
-                <p>{{player.totalTimeString}}</p>
-                <p>{{ player.gap }}</p>
-
-         
     </ng-container>
 </div>
