@@ -17,6 +17,48 @@ ul {
         &:hover {
             background-color: rgba(197, 78, 74, 0.479);
         }
+    }
+}
 
+::ng-deep {
+    h1 {
+        text-align: center;
+    }
+    table {
+        margin: auto;
+        font-size: 1.5em;
+        td {
+            padding: 0.1em 1em;
+            border: 1px solid right;
+        }
+    
+        tr.players-table {
+            margin-top: 1em;
+            color: yellow;
+        }
+    }
+    .btn-submit, .btn-start {
+        font-size: 1.2em;
+        margin: 1em;
+        padding: 0.5em 1em ;
+        background-color: rgb(12, 158, 12);
+        border: none;
+        color: white;
+        &:hover {
+            background-color: rgba(12, 158, 12, 0.466);
+        }
+    }
+
+    .btn-start {
+        background-color: rgb(255, 20, 59);
+        border: none;
+        color: white;
+        &:hover {
+            background-color: rgba(255, 20, 59, 0.466);
+        }
+    }
+    
+    .center {
+        text-align: center;
     }
 }
