@@ -15,7 +15,10 @@
             </tr>
 
             <tr *ngFor="let player of players" class="players-table">
-                <td>{{ player.name }}</td>
+                <td>
+                    {{ player.name }}
+                    <small *ngIf="currentStage === drivers[0].stages.length">- sugested dif. level:({{player.sugDifficulty}}%)</small>
+                </td>
                 <td>{{ player.totalTimeString }}</td>
                 <td>{{ player.gap }}</td>
             </tr>

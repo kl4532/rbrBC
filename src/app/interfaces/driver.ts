@@ -6,4 +6,5 @@ interface Driver {
     totalTimeString?: string; 
     gap?: string;
     currentStageTime?: string;
+    sugDifficulty?: number;
 }
