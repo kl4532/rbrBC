@@ -1,6 +1,6 @@
 {
   "name": "rbr-bc",
-  "version": "0.5.1",
+  "version": "0.5.0",
   "main": "electron/dist/main.js",
   "author": "corny",
   "description": "Application for generating rally stage times",
@@ -12,8 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build --base-href ./ && tsc --p electron && electron .",
-    "dist": "electron-builder",
-    "dist:linux": "electron-builder --linux"
+    "dist": "ng build && electron-builder"
   },
   "private": true,
   "dependencies": {
@@ -58,20 +57,21 @@
     "appId": "com.rbr-bc.app",
     "productName": "RBR Bot Championship",
     "target": "NSIS",
+    "icon": "./assets/win/icon.ico",
     "directories": {
       "output": "build"
     },
-		"win": {
+    "win": {
       "icon": "./assets/win/icon.ico",
-			"target": [
-				{
+      "target": [
+        {
           "target": "portable",
-					"arch": [
+          "arch": [
             "x64",
-						"ia32"
-					]
-				}
-			]
+            "ia32"
+          ]
+        }
+      ]
     },
     "linux": {
       "target": "AppImage",
