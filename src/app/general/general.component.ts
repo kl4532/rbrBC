@@ -40,9 +40,8 @@ export class GeneralComponent implements OnInit, OnDestroy {
       .reduce((total, record)=>{
         return total + record;
       })
-      .toFixed()
     this.players.forEach(player => {
-      player.sugDifficulty = +(200 - (player.totalTimeSeconds/bestPossibleTotalTime * 100)).toFixed(0);
+      player.sugDifficulty = +(200 - +(player.totalTimeSeconds/bestPossibleTotalTime * 100)).toFixed(0);
     })
   }
 }

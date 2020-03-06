@@ -37,7 +37,7 @@ export class SettingsComponent implements OnInit {
   // TODO add validator for player name input in selectedPlayers 
   ngOnInit() {
     this.settingsForm = new FormGroup({
-      difficulty: new FormControl('50'),
+      difficulty: new FormControl('75'),
       surface: new FormControl('All'),
       lMin: new FormControl('3'),
       lMax: new FormControl('11'),
