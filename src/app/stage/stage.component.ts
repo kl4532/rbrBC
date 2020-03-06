@@ -99,8 +99,4 @@ export class StageComponent implements OnInit {
     }
     return this.timesValidator;
   }
-
-  playAgain() {
-    // this.srv.setSettings([]);
-  }
 }

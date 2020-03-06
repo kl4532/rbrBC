@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators} from '@angular/forms';
 import { DataService } from '../services/data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -25,7 +26,8 @@ export class SettingsComponent implements OnInit {
 
   constructor( 
     private fb:FormBuilder, 
-    private srv: DataService) {}
+    private srv: DataService,
+    private router: Router) {}
 
   private get selectedTracks(){
     return <FormArray>this.settingsForm.get('selectedTracks')
@@ -88,10 +90,6 @@ export class SettingsComponent implements OnInit {
         })
       })
     this.generatePlayers();
-    // this.settingsForm.get('selectedPlayers').controls.forEach( player =>{
-    //     console.log(player.value.name);
-    //   }
-    // )
   }
 
   generatePlayers() {
@@ -114,6 +112,7 @@ export class SettingsComponent implements OnInit {
   onSubmit() {
     console.log(this.settingsForm);
     this.srv.setSettings(this.settingsForm);
+    this.router.navigateByUrl('/stage');
   }
   
   drawNoRep(arr: Object[], quantity) {

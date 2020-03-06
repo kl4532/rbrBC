@@ -19,7 +19,6 @@ export class GeneralComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
-        console.log(data.settingsForm);
         this.drivers = data.drivers;
         this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
         this.currentStage = data.currentStage;

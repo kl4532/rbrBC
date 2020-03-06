@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { version } from '../../package.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,14 @@ import { version } from '../../package.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(private router: Router){
+
+  }
   public version: string = version;
   title = 'rbrBC';
+
+  ngOnInit() {
+    this.router.navigateByUrl('/settings');
+  }
 }
