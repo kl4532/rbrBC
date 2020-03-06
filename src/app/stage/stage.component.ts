@@ -16,6 +16,7 @@ export class StageComponent implements OnInit {
   started = false;
   currentStage: number = 0;
   displayAllStages = false;
+  timesValidator = true;
 
   constructor(private srv: DataService) { 
   }
@@ -75,14 +76,28 @@ export class StageComponent implements OnInit {
   }
 
   submitResults() {
-    this.srv.setPlayersStageTimes(this.settingsForm, this.drivers, this.currentStage, this.selectedTracks);
-    if(this.currentStage>0 && this.currentStage < this.drivers[0].stages.length){
-      this.playStage(this.currentStage);
+    if(this.areTimesValid()){
+      this.srv.setPlayersStageTimes(this.settingsForm, this.drivers, this.currentStage, this.selectedTracks);
+      if(this.currentStage>0 && this.currentStage < this.drivers[0].stages.length){
+        this.playStage(this.currentStage);
+      }
+      this.currentStage++
+      console.log("submit current stage", this.currentStage);
+  
+      this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
     }
-    this.currentStage++
-    console.log("submit current stage", this.currentStage);
+  }
 
-    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
+  areTimesValid(): boolean {
+    this.timesValidator = true;
+    const regex = /^(([0-9]{1,3}):([0-9]{1,2})(\.[0-9]{1,3})?)$/;
+    for (let player of this.settingsForm.value.selectedPlayers) {
+      if(!regex.test(player.currentStageTime)) {
+        this.timesValidator = false;
+        break;
+      }
+    }
+    return this.timesValidator;
   }
 
   playAgain() {
