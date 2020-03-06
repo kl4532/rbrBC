@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, globalShortcut } from 'electron'
 import * as path from 'path'
 import * as url from 'url'
 
@@ -14,6 +14,17 @@ app.on('activate', () => {
 
 function createWindow() {
   win = new BrowserWindow({ width: 800, height: 600 })
+
+  globalShortcut.register('f5', function() {
+    win.reload()
+    win.loadURL(
+      url.format({
+        pathname: path.join(__dirname, `/../../dist/index.html`),
+        protocol: 'file:',
+        slashes: true,
+      })
+    )
+	})
 
   win.loadURL(
     url.format({
