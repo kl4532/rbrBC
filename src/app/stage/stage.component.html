@@ -27,7 +27,7 @@
             <tr formArrayName="selectedPlayers" *ngFor="let player of settingsForm.get('selectedPlayers').controls; let i= index">
                 <ng-container [formGroupName]="i">
                     <td>{{player.value.name}}</td>
-                    <td><input formControlName="currentStageTime" name="currentStageTime" type="text"></td>
+                    <td><input class="player-time-input" formControlName="currentStageTime" name="currentStageTime" type="text"></td>
                 </ng-container>
             </tr> 
         </table>
