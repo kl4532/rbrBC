@@ -7,4 +7,5 @@ interface Driver {
     gap?: string;
     currentStageTime?: string;
     sugDifficulty?: number;
+    player?: boolean;
 }

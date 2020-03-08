@@ -7,25 +7,23 @@
                 <th>Time</th>
                 <th>Gap</th>
             </tr>
-
-            <tr *ngFor="let driver of drivers">
+            <tr [ngClass]="{'player': driver.player}" *ngFor="let driver of drivers">
                 <td>{{ driver.name }}</td>
                 <td>{{ driver.totalTimeString }}</td>
                 <td>{{ driver.gap }}</td>
             </tr>
-
-            <tr *ngFor="let player of players" class="players-table">
-                <td>
-                    {{ player.name }}
-                    <small *ngIf="currentStage === drivers[0].stages.length">- sugested dif. level:({{player.sugDifficulty}}%)</small>
-                </td>
-                <td>{{ player.totalTimeString }}</td>
-                <td>{{ player.gap }}</td>
-            </tr>
         </table>
     </ng-container>
 
-    <ng-container *ngIf="currentStage === drivers[0].stages.length">
-        <h2 class="center">Finish, press F5 to play again</h2>
-    </ng-container>
+    <div class="center" *ngIf="currentStage === +settingsForm.value.stages">
+        <hr>
+
+        <h3>Suggested level</h3>
+        <ul class="results">
+            <li *ngFor="let player of players">{{ player.name }} - {{player.sugDifficulty}}%</li>
+        </ul>
+        
+        <hr>
+        <h2>Finish, press F5 to play again</h2>
+    </div>
 </div>

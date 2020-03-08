@@ -104,6 +104,7 @@ export class SettingsComponent implements OnInit {
           totalTimeString: "",
           gap: "0",
           currentStageTime: "",
+          player: true
         })
       )
     }

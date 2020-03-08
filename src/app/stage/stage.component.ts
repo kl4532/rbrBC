@@ -34,7 +34,7 @@ export class StageComponent implements OnInit {
           this.srv.getDrivers("WRC")
             .subscribe(dws => this.drivers = dws);
         }else {
-          this.drivers = data.drivers;
+          this.drivers = data.drivers.filter(driver => !driver.player);
           this.currentStage = data.currentStage
           this.drivers.sort((a,b)=>a.stages[this.currentStage].timeSeconds - b.stages[this.currentStage].timeSeconds);
           console.log("CS", this.currentStage);
