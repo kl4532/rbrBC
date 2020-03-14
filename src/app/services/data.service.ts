@@ -64,9 +64,11 @@ export class DataService {
 
   timeToString(time:number): string {
     let minutes: any = (time/60) | 0;
-    let seconds = time%60
-    minutes<10 ? minutes = "0" + minutes  : 0;
-    return  minutes + ":" + seconds.toFixed(2);
+    let seconds: any = time%60;
+    seconds = seconds.toFixed(2)
+    seconds<10 ? seconds = "0" + seconds : 0;
+    minutes<10 ? minutes = "0" + minutes : 0;
+    return  minutes + ":" + seconds;
   }
 
   setStageTimes(talent, stage): Object {
@@ -120,7 +122,7 @@ export class DataService {
         //set total values
         player.totalTimeSeconds = player.totalTimeSeconds + this.timeToSeconds(player.currentStageTime);
         player.totalTimeString = this.timeToString(player.totalTimeSeconds);
-        player.gap = this.timeToString(drivers[0].totalTimeSeconds - player.totalTimeSeconds);
+        // player.gap = this.timeToString(drivers[0].totalTimeSeconds - player.totalTimeSeconds);
         
         // set stage values
         player.stages === null ? player.stages = [] : 0;
@@ -136,5 +138,12 @@ export class DataService {
         selectedPlayers: players
       });
     return this.submitedSettings;
+  }
+
+  calculateGap(drivers) :Driver[] {
+    for(let driver of drivers) {
+      driver.gap = this.timeToString(driver.totalTimeSeconds - drivers[0].totalTimeSeconds);
+    }
+    return drivers;
   }
 }

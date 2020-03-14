@@ -29,6 +29,7 @@ export class GeneralComponent implements OnInit, OnDestroy {
         this.players.forEach(player => this.drivers.push(player));
 
         this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
+        this.drivers =  this.srv.calculateGap(this.drivers);
         this.currentStage = data.currentStage;
         
         this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;

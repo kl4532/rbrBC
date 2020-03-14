@@ -90,7 +90,7 @@ export class StageComponent implements OnInit {
 
   areTimesValid(): boolean {
     this.timesValidator = true;
-    const regex = /^(([0-9]{1,3}):([0-9]{1,2})(\.[0-9]{1,3})?)$/;
+    const regex = /^(([0-9]{2,3}):([0-9]{1,2})(\.[0-9]{1,3})?)$/;
     for (let player of this.settingsForm.value.selectedPlayers) {
       if(!regex.test(player.currentStageTime)) {
         this.timesValidator = false;
