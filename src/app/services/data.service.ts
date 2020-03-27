@@ -76,23 +76,18 @@ export class DataService {
     let crash: boolean;
     let difficulty = this.submitedSettings.controls.difficulty.value;
 
-    switch (talent) {
-      case 1:
-        timeSeconds = this.timeToSeconds(stage.record)*(200-difficulty)/100*this.getRandomInt(100,110)/100;
-        crash = this.getRandomInt(1,100) > 99 ? true : false;
-        break;
-      case 2:
-        timeSeconds = this.timeToSeconds(stage.record)*(200-difficulty)/100*this.getRandomInt(105,120)/100
-        crash = this.getRandomInt(1,100) > 98 ? true : false;
-        break;
-      case 3:
-        timeSeconds = this.timeToSeconds(stage.record)*(200-difficulty)/100*this.getRandomInt(110,130)/100
-        crash = this.getRandomInt(1,100) > 97 ? true : false;
-        break;        
-    
-      default:
-        break;
-    }
+    console.log("talent", talent);
+    const rangeBott = (95+(3*talent.fast));
+    const rangeTop= (rangeBott+(10*talent.consist));
+    console.log("ranges", rangeBott + ":" + rangeTop);
+
+    timeSeconds = this.timeToSeconds(stage.record)*(200-difficulty)/100*this.getRandomInt(rangeBott, rangeTop)/100;
+
+    //player with super talent have 25% chance to reduce stage time for 2%
+    talent.super && this.getRandomInt(1,6) === 1 ? timeSeconds = timeSeconds * 0.98 : 0;
+
+    // crash to be implemented
+    crash = this.getRandomInt(1,100) > (100-talent.consist) ? true : false;
 
     return {
       name: stage.stage,

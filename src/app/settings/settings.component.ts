@@ -98,7 +98,7 @@ export class SettingsComponent implements OnInit {
         this.fb.group({
           id: i+100,
           name: "Player " + (i+1),
-          talent: 0,
+          talent: {},
           stages: [],
           totalTimeSeconds: 0,
           totalTimeString: "",

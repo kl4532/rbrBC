@@ -1,6 +1,6 @@
 interface Driver {
     name: string;
-    talent: number;
+    talent: Talent;
     stages?: Stage[];
     totalTimeSeconds?: number;
     totalTimeString?: string; 
