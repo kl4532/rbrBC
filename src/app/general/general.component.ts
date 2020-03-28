@@ -17,22 +17,26 @@ export class GeneralComponent implements OnInit, OnDestroy {
   players: Driver[];
   sugDifficulty: number;
   settingsForm: FormGroup;
+  started: boolean = false;
 
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
-        this.settingsForm = data.settingsForm;
-        this.drivers = data.drivers;
-        this.players = data.settingsForm.controls.selectedPlayers.value;
-        
-        this.drivers = data.drivers.filter(driver => !driver.player);
-        this.players.forEach(player => this.drivers.push(player));
+          this.settingsForm = data.settingsForm;
+          this.drivers = data.drivers;
+          this.players = data.settingsForm.controls.selectedPlayers.value;
 
-        this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
-        this.drivers =  this.srv.calculateGap(this.drivers);
-        this.currentStage = data.currentStage;
-        
-        this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
+          //check if tournament started(first submission of player)
+          this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
+          
+          this.drivers = data.drivers.filter(driver => !driver.player);
+          this.players.forEach(player => this.drivers.push(player));
+  
+          this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
+          this.drivers =  this.srv.calculateGap(this.drivers);
+          this.currentStage = data.currentStage;
+          
+          this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
       })
   }
 

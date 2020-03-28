@@ -1,4 +1,6 @@
-<div class="table" *ngIf="drivers">
+<h2 #message>Please first submit your result in <a routerLink="/stage">STAGE</a></h2>
+
+<div class="table" *ngIf="started; else message">
     <ng-container>
         <h1>General classification after {{currentStage}} stage[s]</h1>
         <table >

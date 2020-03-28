@@ -67,6 +67,13 @@ ul {
         font-size: 1em;
         font-family: monospace;
     }
+
+    a {
+        color: rgba(255, 255, 24, 0.726);
+        &:hover{
+            color: rgba(255, 182, 24, 0.726);
+        }
+    }
 }
 .version {
     color: white;
@@ -75,3 +82,4 @@ ul {
     top:0;
     right:0.2em;
 }
+

@@ -1,8 +1,8 @@
-<div class="center" *ngIf="selectedTracks && !started">
+<div class="center" *ngIf="selectedTracks && !started && !finish">
     <button class="btn-start" (click)="init()">Start tournament</button>
 </div>
 
-<h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in settings tab</h2>
+<h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in <a routerLink="/settings">SETTINGS</a></h2>
 
 <div class="table" *ngIf="drivers.length > 0 && started">
     <ng-container *ngFor="let stage of selectedTracks; index as i">
@@ -36,12 +36,12 @@
             <button class="btn-submit" type="submit">Submit</button>
         </div>
     </form>
-
-    <ng-container *ngIf="currentStage == settingsForm.value.stages">
-        THE END
-        <!-- <button (click)="displayAllStages = true">Display all stages</button> -->
-        <h2>Press F5 to play again</h2>
-    </ng-container>
 </div>
+
+<ng-container *ngIf="finish">
+    THE END
+    <!-- <button (click)="displayAllStages = true">Display all stages</button> -->
+    <h2>Press F5 to play again</h2>
+</ng-container>
 
 

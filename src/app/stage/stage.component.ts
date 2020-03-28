@@ -17,6 +17,7 @@ export class StageComponent implements OnInit {
   currentStage: number = 0;
   displayAllStages = false;
   timesValidator = true;
+  finish = false;
 
   constructor(private srv: DataService) { 
   }
@@ -27,24 +28,25 @@ export class StageComponent implements OnInit {
     if(this.settingsForm){
       this.selectedTracks = this.settingsForm.value.selectedTracks;
     }
+    
     this.srv.getTotalResults()
       .subscribe(data => {
-        console.log("stage Drivers:",data.drivers);
         if(data.length === 0){
           this.srv.getDrivers("WRC")
             .subscribe(dws => this.drivers = dws);
         }else {
-          this.drivers = data.drivers.filter(driver => !driver.player);
           this.currentStage = data.currentStage
-          this.drivers.sort((a,b)=>a.stages[this.currentStage].timeSeconds - b.stages[this.currentStage].timeSeconds);
-          console.log("CS", this.currentStage);
-          this.started = data.started;
+          this.currentStage == this.settingsForm.value.stages ? this.finish = true : this.finish = false;
+          if(!this.finish){
+            this.drivers = data.drivers.filter(driver => !driver.player);
+            this.drivers.sort((a,b)=>a.stages[this.currentStage].timeSeconds - b.stages[this.currentStage].timeSeconds);
+            this.started = data.started;
+          }
         }
       })
   }
 
   init() {
-    console.log("currentStage", this.currentStage);
     this.started = true;
     this.drivers
       .forEach(dw => {
@@ -54,6 +56,8 @@ export class StageComponent implements OnInit {
           })
       })
     this.playStage(0);
+    // indicate that tournament started
+    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
   }
 
   playStage(index) {
@@ -63,7 +67,6 @@ export class StageComponent implements OnInit {
         dw.totalTimeString = this.srv.timeToString(dw.totalTimeSeconds);
       })
     this.drivers.sort((a,b)=>a.stages[index].timeSeconds - b.stages[index].timeSeconds);
-    console.log(`sorted drivers, stage:${this.currentStage}`, this.drivers);
     this.drivers
       .forEach((dw, i) => {
         if(i==0){
@@ -82,7 +85,6 @@ export class StageComponent implements OnInit {
         this.playStage(this.currentStage);
       }
       this.currentStage++
-      console.log("submit current stage", this.currentStage);
   
       this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
     }
