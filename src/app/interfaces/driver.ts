@@ -8,4 +8,5 @@ interface Driver {
     currentStageTime?: string;
     sugDifficulty?: number;
     player?: boolean;
+    crash?: boolean;
 }

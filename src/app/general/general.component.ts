@@ -30,6 +30,7 @@ export class GeneralComponent implements OnInit, OnDestroy {
           this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
           
           this.drivers = data.drivers.filter(driver => !driver.player);
+          console.log("drivers", this.drivers);
           this.players.forEach(player => this.drivers.push(player));
   
           this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);

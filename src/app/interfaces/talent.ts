@@ -1,5 +1,6 @@
 interface Talent {
     fast: number,
-    consist: number,
+    consistence: number,
+    safe: number,
     super: true
 }

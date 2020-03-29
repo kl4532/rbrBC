@@ -10,13 +10,15 @@
             <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}})</h1>
             <table >
                 <tr>
-                    <th>Name</th>
+                    <th>Name</th> 
                     <th>Time</th>
+                    <th>Crash</th>
                     <!-- <th>Timesec</th> -->
                 </tr>
-                <tr *ngFor="let driver of drivers">
+                <tr [ngStyle]="{'color': driver.stages[i].crash ? 'red' : 'inherit'}" *ngFor="let driver of drivers">
                     <td>{{ driver.name }}</td>
                     <td>{{ driver.stages[i].timeString }}</td>
+                    <td>{{ driver.stages[i].crash ? "X" : "" }}</td>
                     <!-- <td>{{ driver.stages[i].gap }}</td> -->
                 </tr>
             </table>

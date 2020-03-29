@@ -5,7 +5,8 @@
             "name": "Thierry Neuville",
             "talent": {
                 "fast": 1,
-                "consist": 2,
+                "consistence": 2,
+                "safe": 2,
                 "super": false
             },
             "stages": [],
@@ -17,7 +18,8 @@
             "name": "Ott Tänak",
             "talent": {
                 "fast": 1,
-                "consist": 2,
+                "consistence": 2,
+                "safe": 2,
                 "super": true
             },
             "stages": [],
@@ -28,8 +30,9 @@
             "id": 3,
             "name": "Sébastien Ogier",
             "talent": {
-                "fast": 1,
-                "consist": 1,
+                "fast": 2,
+                "consistence": 1,
+                "safe": 1,
                 "super": true
             },
             "stages": [],
@@ -41,7 +44,8 @@
             "name": "Elfyn Evans",
             "talent": {
                 "fast": 2,
-                "consist": 1,
+                "consistence": 1,
+                "safe": 2,
                 "super": false
             },
             "stages": [],
@@ -53,7 +57,8 @@
             "name": "Esapekka Lappi",
             "talent": {
                 "fast": 2,
-                "consist": 3,
+                "consistence": 2,
+                "safe": 1,
                 "super": false
             },
             "stages": [],
@@ -64,8 +69,9 @@
             "id": 6,
             "name": "Teemu Suninen",
             "talent": {
-                "fast": 3,
-                "consist": 3,
+                "fast": 2,
+                "consistence": 2,
+                "safe": 2,
                 "super": false
             },
             "stages": [],
@@ -77,7 +83,8 @@
             "name": "Takamoto Katsuta",
             "talent": {
                 "fast": 3,
-                "consist": 3,
+                "consistence": 1,
+                "safe": 2, 
                 "super": false
             },
             "stages": [],
@@ -89,7 +96,8 @@
             "name": "Eric Camilli",
             "talent": {
                 "fast": 3,
-                "consist": 2,
+                "consistence": 2,
+                "safe": 3,
                 "super": false
             },
             "stages": [],
@@ -101,7 +109,8 @@
             "name": "Gus Greensmith",
             "talent": {
                 "fast": 3,
-                "consist": 1,
+                "consistence": 1,
+                "safe": 1,
                 "super": false
             },
             "stages": [],
@@ -113,7 +122,8 @@
             "name": "Kalle Rovanperä",
             "talent": {
                 "fast": 2,
-                "consist": 2,
+                "consistence": 2,
+                "safe": 1,
                 "super": true
             },
             "stages": [],
@@ -125,7 +135,8 @@
             "name": "Robert Kubica",
             "talent": {
                 "fast": 1,
-                "consist": 3,
+                "consistence": 2,
+                "safe": 4,
                 "super": true
             },
             "stages": [],
@@ -139,7 +150,7 @@
             "name": "Mads Østberg",
             "talent": {
                 "fast": 3,
-                "consist": 2,
+                "consistence": 2,
                 "super": false
             },
             "stages": [],
@@ -151,7 +162,7 @@
             "name": "Kajetan Kajetanowicz",
             "talent": {
                 "fast": 3,
-                "consist": 1,
+                "consistence": 1,
                 "super": false
             },
             "stages": [],
