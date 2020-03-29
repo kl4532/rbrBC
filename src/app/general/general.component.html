@@ -1,4 +1,8 @@
-<h2 #message>Please first submit your result in <a routerLink="/stage">STAGE</a></h2>
+<ng-template #message>
+    <h2>
+        Please first submit your result in <a routerLink="/stage">STAGE</a>
+    </h2>
+</ng-template>
 
 <div class="table" *ngIf="started; else message">
     <ng-container>
