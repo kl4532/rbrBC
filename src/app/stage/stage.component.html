@@ -23,15 +23,6 @@
             </table>
         </ng-container>
     </ng-container>
-    <div class="center" *ngIf="driversOut.length > 0">
-        <h2>Out</h2>
-        <div style="font-size: small;">
-            <table *ngFor="let driver of driversOut">
-                <tr>{{ driver.name }}</tr>
-            </table>
-        </div>
-        <hr>
-    </div>
 
     <form [formGroup]="settingsForm" (ngSubmit)="submitResults()">
         <table>
@@ -47,6 +38,15 @@
             <button class="btn-submit" type="submit">Submit</button>
         </div>
     </form>
+    <div class="center" *ngIf="driversOut.length > 0">
+        <hr>
+        <h2>Out</h2>
+        <div style="font-size: small;">
+            <table *ngFor="let driver of driversOut">
+                <tr>{{ driver.name }}</tr>
+            </table>
+        </div>
+    </div>
 </div>
 
 <ng-container *ngIf="finish">
