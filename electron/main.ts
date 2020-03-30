@@ -13,7 +13,8 @@ app.on('activate', () => {
 })
 
 function createWindow() {
-  win = new BrowserWindow({ width: 800, height: 600 })
+  win = new BrowserWindow();
+  win.maximize() 
 
   globalShortcut.register('f5', function() {
     win.reload()

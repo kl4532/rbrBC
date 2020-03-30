@@ -11,7 +11,9 @@ electron_1.app.on('activate', function () {
     }
 });
 function createWindow() {
-    win = new electron_1.BrowserWindow({ width: 800, height: 600 });
+    // win = new BrowserWindow({ width: 800, height: 600 })
+    win = new electron_1.BrowserWindow();
+    win.maximize();
     electron_1.globalShortcut.register('f5', function () {
         win.reload();
         win.loadURL(url.format({
