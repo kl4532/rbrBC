@@ -1,6 +1,6 @@
 {
   "name": "rbr-bc",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "main": "electron/dist/main.js",
   "author": "corny",
   "description": "Application for generating rally stage times",

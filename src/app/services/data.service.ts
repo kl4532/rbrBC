@@ -93,8 +93,8 @@ export class DataService {
 
     return {
       name: stage.stage,
-      timeSeconds: timeSeconds,
-      timeString: this.timeToString(timeSeconds),
+      timeSeconds: crash ? 9999999999999999 : timeSeconds,
+      timeString: crash ? "OUT" : this.timeToString(timeSeconds),
       crash: crash
     }
   }
@@ -104,8 +104,8 @@ export class DataService {
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   }
 
-  sendTotalResults(drivers: Driver[], currentStage, started, settingsForm) {
-      const data = {drivers: drivers, currentStage: currentStage, started: started, settingsForm: settingsForm}
+  sendTotalResults(drivers: Driver[], currentStage, started, settingsForm, driversOut: Driver[]) {
+      const data = {drivers: drivers, currentStage: currentStage, started: started, settingsForm: settingsForm, driversOut}
       this.stageData.next(data);
   }
 

@@ -5,26 +5,34 @@
 </ng-template>
 
 <div class="table" *ngIf="started; else message">
-    <ng-container>
-        <h1>General classification after {{currentStage}} stage[s]</h1>
-        <table >
-            <tr>
-                <th>Name</th>
-                <th>Time</th>
-                <th>Gap</th>
-            </tr>
-            <tr [ngClass]="{'player': driver.player}" *ngFor="let driver of drivers">
-                <td>{{ driver.name }}</td>
-                <td>{{ driver.totalTimeString }}</td>
-                <td>{{ driver.gap }}</td>
-            </tr>
-        </table>
-    </ng-container>
+    <h1>General classification after {{currentStage}} stage[s]</h1>
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Gap</th>
+        </tr>
+        <tr [ngClass]="{'player': driver.player}" *ngFor="let driver of drivers">
+            <td>{{ driver.name }}</td>
+            <td>{{ driver.totalTimeString }}</td>
+            <td>{{ driver.gap }}</td>
+        </tr>
+    </table>
+
+    <div class="center" *ngIf="driversOut.length > 0">
+        <h2>Out</h2>
+        <div style="font-size: small;">
+            <table *ngFor="let driver of driversOut">
+                <tr>{{ driver.name }}</tr>
+            </table>
+        </div>
+    </div>
+    
 
     <div class="center" *ngIf="currentStage === +settingsForm.value.stages">
         <hr>
 
-        <h3>Suggested level</h3>
+        <h3>Estimated level of players</h3>
         <ul class="results">
             <li *ngFor="let player of players">{{ player.name }} - {{player.sugDifficulty}}%</li>
         </ul>

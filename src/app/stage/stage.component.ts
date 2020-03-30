@@ -10,6 +10,7 @@ import { DataService } from '../services/data.service';
 export class StageComponent implements OnInit {
 
   drivers: Driver[] = [];
+  driversOut: Driver[] = [];
 
   selectedTracks;
   settingsForm: FormGroup;
@@ -37,8 +38,9 @@ export class StageComponent implements OnInit {
         }else {
           this.currentStage = data.currentStage
           this.currentStage == this.settingsForm.value.stages ? this.finish = true : this.finish = false;
+          this.drivers = data.drivers.filter(driver => !driver.player);
+          this.driversOut  = data.driversOut;
           if(!this.finish){
-            this.drivers = data.drivers.filter(driver => !driver.player);
             this.drivers.sort((a,b)=>a.stages[this.currentStage].timeSeconds - b.stages[this.currentStage].timeSeconds);
             this.started = data.started;
           }
@@ -57,22 +59,28 @@ export class StageComponent implements OnInit {
       })
     this.playStage(0);
     // indicate that tournament started
-    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
+    this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm, this.driversOut);
   }
 
   playStage(index) {
     this.drivers
       .forEach(dw => {
+        if(!dw.crash){
+          dw.crash = dw.stages[index].crash;
+        } 
         dw.totalTimeSeconds = dw.totalTimeSeconds ? dw.totalTimeSeconds + dw.stages[index].timeSeconds : dw.stages[index].timeSeconds;
         dw.totalTimeString = this.srv.timeToString(dw.totalTimeSeconds);
       })
+    const currentdriversOut = this.drivers.filter(driver => driver.crash);
+    currentdriversOut.forEach( driver => this.driversOut.push(driver));
+
+    this.drivers = this.drivers.filter(driver => !driver.crash)
     this.drivers.sort((a,b)=>a.stages[index].timeSeconds - b.stages[index].timeSeconds);
     this.drivers
       .forEach((dw, i) => {
         if(i==0){
           dw.gap = "00:00"
         } else{
-          //TOFIX
           dw.gap = this.srv.timeToString(dw.totalTimeSeconds - this.drivers[0].totalTimeSeconds); 
         }
       })
@@ -86,8 +94,9 @@ export class StageComponent implements OnInit {
       }
       this.currentStage++
   
-      this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm);
+      this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm, this.driversOut);
     }
+    console.log("SDO", this.driversOut);
   }
 
   areTimesValid(): boolean {

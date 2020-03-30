@@ -18,12 +18,14 @@ export class GeneralComponent implements OnInit, OnDestroy {
   sugDifficulty: number;
   settingsForm: FormGroup;
   started: boolean = false;
+  driversOut: Driver[];
 
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
           this.settingsForm = data.settingsForm;
           this.drivers = data.drivers;
+          this.driversOut = data.driversOut;
           this.players = data.settingsForm.controls.selectedPlayers.value;
 
           //check if tournament started(first submission of player)
@@ -38,6 +40,7 @@ export class GeneralComponent implements OnInit, OnDestroy {
           this.currentStage = data.currentStage;
           
           this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
+          console.log("DO", this.driversOut);
       })
   }
 

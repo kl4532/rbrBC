@@ -4,27 +4,36 @@
 
 <h2 *ngIf="!selectedTracks && !started">Please, select and submit tracks in <a routerLink="/settings">SETTINGS</a></h2>
 
-<div class="table" *ngIf="drivers.length > 0 && started">
+<div class="table" *ngIf="drivers.length > 0 && started && !finish">
     <ng-container *ngFor="let stage of selectedTracks; index as i">
         <ng-container *ngIf="i===currentStage || displayAllStages">
             <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}})</h1>
             <table >
                 <tr>
+                    <th>Place</th>
                     <th>Name</th> 
                     <th>Time</th>
-                    <th>Crash</th>
                     <!-- <th>Timesec</th> -->
                 </tr>
-                <tr [ngStyle]="{'color': driver.stages[i].crash ? 'red' : 'inherit'}" *ngFor="let driver of drivers">
+                <tr [ngStyle]="{'color': driver.stages[i].crash ? 'red' : 'inherit'}" *ngFor="let driver of drivers; let place = index">
+                    <th>{{ place+1 }}</th>
                     <td>{{ driver.name }}</td>
                     <td>{{ driver.stages[i].timeString }}</td>
-                    <td>{{ driver.stages[i].crash ? "X" : "" }}</td>
-                    <!-- <td>{{ driver.stages[i].gap }}</td> -->
                 </tr>
             </table>
         </ng-container>
     </ng-container>
-    <form [formGroup]="settingsForm" (ngSubmit)="submitResults()" *ngIf="currentStage < settingsForm.value.stages">
+    <div class="center" *ngIf="driversOut.length > 0">
+        <h2>Out</h2>
+        <div style="font-size: small;">
+            <table *ngFor="let driver of driversOut">
+                <tr>{{ driver.name }}</tr>
+            </table>
+        </div>
+        <hr>
+    </div>
+
+    <form [formGroup]="settingsForm" (ngSubmit)="submitResults()">
         <table>
             <tr formArrayName="selectedPlayers" *ngFor="let player of settingsForm.get('selectedPlayers').controls; let i= index">
                 <ng-container [formGroupName]="i">
