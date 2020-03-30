@@ -40,7 +40,6 @@ export class GeneralComponent implements OnInit, OnDestroy {
           this.currentStage = data.currentStage;
           
           this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
-          console.log("DO", this.driversOut);
       })
   }
 
