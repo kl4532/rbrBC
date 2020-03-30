@@ -57,12 +57,12 @@
     "appId": "com.rbr-bc.app",
     "productName": "RBR Bot Championship",
     "target": "NSIS",
-    "icon": "./assets/win/icon.ico",
+    "icon": "./assets/icons/win/icon.ico",
     "directories": {
       "output": "build"
     },
     "win": {
-      "icon": "./assets/win/icon.ico",
+      "icon": "./assets/icons/win/icon.ico",
       "target": [
         {
           "target": "portable",
