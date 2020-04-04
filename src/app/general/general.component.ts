@@ -19,6 +19,7 @@ export class GeneralComponent implements OnInit, OnDestroy {
   settingsForm: FormGroup;
   started: boolean = false;
   driversOut: Driver[];
+  totalDistance: number;
 
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
@@ -32,7 +33,6 @@ export class GeneralComponent implements OnInit, OnDestroy {
           this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
           
           this.drivers = data.drivers.filter(driver => !driver.player);
-          console.log("drivers", this.drivers);
           this.players.forEach(player => this.drivers.push(player));
   
           this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
@@ -40,6 +40,13 @@ export class GeneralComponent implements OnInit, OnDestroy {
           this.currentStage = data.currentStage;
           
           this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
+          this.totalDistance = this.settingsForm.value.selectedTracks
+            .map(track=> track.length)
+            .slice(0, this.currentStage)
+            .reduce((total, length)=>{
+              return total + length;
+            })
+            .toFixed(0);
       })
   }
 

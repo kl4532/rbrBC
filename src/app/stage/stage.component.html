@@ -7,7 +7,7 @@
 <div class="table" *ngIf="drivers.length > 0 && started && !finish">
     <ng-container *ngFor="let stage of selectedTracks; index as i">
         <ng-container *ngIf="i===currentStage || displayAllStages">
-            <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}})</h1>
+            <h1>SS {{ i + 1}} - {{stage.stage }} ({{stage.record}}) [{{stage.length}}km]</h1>
             <table >
                 <tr>
                     <th>Place</th>

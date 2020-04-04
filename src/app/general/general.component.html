@@ -5,7 +5,10 @@
 </ng-template>
 
 <div class="table" *ngIf="started; else message">
-    <h1>General classification after {{currentStage}} stage[s]</h1>
+    <div class="center">
+        <h1>General classification </h1>
+        <h2>after {{currentStage}} stage[s] - {{totalDistance}}km</h2>
+    </div>
     <table >
         <tr>
             <th>Name</th>
