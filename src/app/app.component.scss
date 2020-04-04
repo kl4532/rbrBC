@@ -57,6 +57,18 @@ ul {
             background-color: rgba(255, 20, 59, 0.466);
         }
     }
+
+    button:disabled,
+    button[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        &:hover {
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+    }
     
     .center {
         text-align: center;

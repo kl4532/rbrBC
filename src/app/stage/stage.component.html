@@ -35,7 +35,7 @@
         </table>
         <p class="validator center" *ngIf="!timesValidator">Provide times in mm:ss.fff format</p>
         <div class="center">
-            <button class="btn-submit" type="submit">Submit</button>
+            <button [disabled]= "submitDisabled || false" class="btn-submit" type="submit">Submit</button>
         </div>
     </form>
     <div class="center" *ngIf="driversOut.length > 0">

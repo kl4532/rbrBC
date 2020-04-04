@@ -19,6 +19,7 @@ export class StageComponent implements OnInit {
   displayAllStages = false;
   timesValidator = true;
   finish = false;
+  submitDisabled = false;
 
   constructor(private srv: DataService) { 
   }
@@ -88,6 +89,7 @@ export class StageComponent implements OnInit {
 
   submitResults() {
     if(this.areTimesValid()){
+      this.temporaryDisableSubmit();
       this.srv.setPlayersStageTimes(this.settingsForm, this.drivers, this.currentStage, this.selectedTracks);
       if(this.currentStage>0 && this.currentStage < this.drivers[0].stages.length){
         this.playStage(this.currentStage);
@@ -109,5 +111,10 @@ export class StageComponent implements OnInit {
       }
     }
     return this.timesValidator;
+  }
+
+  temporaryDisableSubmit() {
+    this.submitDisabled = true;
+    setTimeout(()=>this.submitDisabled = false, 1000)
   }
 }
