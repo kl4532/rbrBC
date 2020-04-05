@@ -5,7 +5,7 @@ import { GeneralComponent } from './general/general.component';
 import { StageComponent } from './stage/stage.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'general', component: GeneralComponent },
   { path: 'stage', component: StageComponent },
