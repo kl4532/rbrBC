@@ -13,7 +13,6 @@ export class AppComponent {
 
   }
   public version: string = version;
-  title = 'rbrBC';
 
   ngOnInit() {
     this.router.navigateByUrl('/settings');

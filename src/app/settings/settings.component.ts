@@ -1,7 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators} from '@angular/forms';
 import { DataService } from '../services/data.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',

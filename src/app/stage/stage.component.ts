@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DataService } from '../services/data.service';
+import { Driver } from '../interfaces/driver';
 
 @Component({
   selector: 'app-stage',

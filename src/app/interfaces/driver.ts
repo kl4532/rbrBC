@@ -1,4 +1,8 @@
-interface Driver {
+import { Talent } from './talent';
+
+import { Stage } from './stage';
+
+export interface Driver {
     name: string;
     talent: Talent;
     stages?: Stage[];

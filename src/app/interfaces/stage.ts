@@ -1,4 +1,4 @@
-interface Stage {
+export interface Stage {
     name?: string;
     timeSeconds?: number;
     timeString?: string;

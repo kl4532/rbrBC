@@ -1,4 +1,4 @@
-interface Talent {
+export interface Talent {
     fast: number,
     consistence: number,
     safe: number,

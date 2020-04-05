@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Subscription } from 'rxjs';
 import { FormGroup } from '@angular/forms';
+import { Driver } from '../interfaces/driver';
 
 @Component({
   selector: 'app-general',
