@@ -25,29 +25,31 @@ export class GeneralComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
-          this.settingsForm = data.settingsForm;
-          this.drivers = data.drivers;
-          this.driversOut = data.driversOut;
-          this.players = data.settingsForm.controls.selectedPlayers.value;
+          if(data.length>0) {
+              this.settingsForm = data.settingsForm;
+              this.drivers = data.drivers;
+              this.driversOut = data.driversOut;
+              this.players = data.settingsForm.controls.selectedPlayers.value;
 
-          //check if tournament started(first submission of player)
-          this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
-          
-          this.drivers = data.drivers.filter(driver => !driver.player);
-          this.players.forEach(player => this.drivers.push(player));
-  
-          this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
-          this.drivers =  this.srv.calculateGap(this.drivers);
-          this.currentStage = data.currentStage;
-          
-          this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
-          this.totalDistance = this.settingsForm.value.selectedTracks
-            .map(track=> track.length)
-            .slice(0, this.currentStage)
-            .reduce((total, length)=>{
-              return total + length;
-            })
-            .toFixed(0);
+              //check if tournament started(first submission of player)
+              this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
+              
+              this.drivers = data.drivers.filter(driver => !driver.player);
+              this.players.forEach(player => this.drivers.push(player));
+      
+              this.drivers.sort((a,b)=>a.totalTimeSeconds - b.totalTimeSeconds);
+              this.drivers =  this.srv.calculateGap(this.drivers);
+              this.currentStage = data.currentStage;
+              
+              this.currentStage === this.drivers[0].stages.length ? this.estimateDifficulty() : 0;
+              this.totalDistance = this.settingsForm.value.selectedTracks
+                .map(track=> track.length)
+                .slice(0, this.currentStage)
+                .reduce((total, length)=>{
+                  return total + length;
+                })
+                .toFixed(0);
+          }
       })
   }
 
