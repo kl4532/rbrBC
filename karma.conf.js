@@ -11,8 +11,8 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-mocha-reporter'),
       require('karma-junit-reporter'),
-      require('karma-mocha-reporter')
     ],
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
@@ -21,12 +21,19 @@ module.exports = function (config) {
         random: false
       }
     },
+    reporters: ['coverage-istanbul', 'kjhtml', 'mocha', 'junit'],
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/rbrBC'),
-      reports: ['html', 'lcovonly', 'cobertura'],
-      fixWebpackSourcePaths: true
+      dir: require('path').join(__dirname, 'coverage/rbrBC'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true,
+      combineBrowserReports: true,
+      thresholds: {
+        statements: 70,
+        lines: 70,
+        branches: 70,
+        functions: 70
+      }
     },
-    reporters: ['mocha', 'kjhtml', 'junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
