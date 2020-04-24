@@ -77,7 +77,6 @@ export class SettingsComponent implements OnInit {
   }
 
   generateTracks() {
-    this.generated = true;
     let stages = this.settingsForm.controls.stages.value;
     this.selectedTracks.clear();
     this.selectedPlayers.clear();
@@ -88,6 +87,7 @@ export class SettingsComponent implements OnInit {
         this.tracks.forEach((track)=>{
           this.addNewTrack(track);
         })
+        this.generated = true;
       })
     this.generatePlayers();
   }
