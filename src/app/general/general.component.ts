@@ -25,14 +25,15 @@ export class GeneralComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
       .subscribe(data => {
-          if(data.length>0) {
+        console.log("data ",data);
+          //check if tournament started and first time submited
+          if(data.started && data.currentStage > 0) {
               this.settingsForm = data.settingsForm;
               this.drivers = data.drivers;
               this.driversOut = data.driversOut;
               this.players = data.settingsForm.controls.selectedPlayers.value;
-
-              //check if tournament started(first submission of player)
-              this.players[0].totalTimeSeconds === 0 ? this.started = false : this.started =true;
+              
+              this.started = data.started;
               
               this.drivers = data.drivers.filter(driver => !driver.player);
               this.players.forEach(player => this.drivers.push(player));
