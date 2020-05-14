@@ -58,7 +58,7 @@ export class StageComponent implements OnInit {
           .forEach(stage => {
             dw['stages'].push(this.srv.setStageTimes(dw.talent, stage))
           })
-      })
+      });
     this.playStage(0);
     // indicate that tournament started
     this.srv.sendTotalResults(this.drivers, this.currentStage, this.started, this.settingsForm, this.driversOut);
