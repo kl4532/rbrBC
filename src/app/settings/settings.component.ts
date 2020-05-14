@@ -111,7 +111,7 @@ export class SettingsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.settingsForm);
+    // console.log(this.settingsForm);
     this.srv.setSettings(this.settingsForm);
     this.router.navigateByUrl('/stage');
   }

@@ -35,18 +35,22 @@ export class DataService {
       .pipe(
         map(
           (results: Object[]) => {
-            const selCountry = presetForm.controls.country.value;
-            const selSurface = presetForm.controls.surface.value;
+            const selCountry: string[] = presetForm.controls.country.value;
+            const selSurface: string[] = presetForm.controls.surface.value;
             const lMin = presetForm.controls.lMin.value;
             const lMax = presetForm.controls.lMax.value;
             return results
               .filter(obj => {
-                if(selCountry === "All") return true;
-                return obj['country'] === selCountry;
+                // if(selCountry === "All") return true;
+                // return obj['country'] === selCountry;
+                if(selCountry.includes("All")) return true;
+                return selCountry.includes(obj['country']);
               })
               .filter(obj => {
-                if(selSurface === "All") return true;
-                return obj['surface'] === selSurface;
+                // if(selSurface === "All") return true;
+                // return obj['surface'] === selSurface;
+                if(selSurface.includes("All")) return true;
+                return selSurface.includes(obj['surface']);
               })
               .filter(obj => {
                 return (obj['length'] >= lMin && obj['length'] <= lMax );

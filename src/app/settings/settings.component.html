@@ -10,12 +10,12 @@
       max="130">
 
     <label for="surface">Surface</label>
-    <select formControlName="surface" name="surface" id="surface">
+    <select formControlName="surface" name="surface" id="surface" multiple size="2">
       <option *ngFor="let surf of surface" [value]="surf">{{ surf }}</option>
     </select>
 
     <label for="country">Country</label>
-    <select formControlName="country" name="country" id="country">
+    <select formControlName="country" name="country" id="country" multiple size="5">
       <option *ngFor="let count of countries" [value]="count">{{ count }}</option>
     </select>
           
