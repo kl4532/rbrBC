@@ -13,8 +13,8 @@ describe('SettingsComponent', () => {
   let srv: DataService;
 
   let elements = {
-    btnGenerate: () => document.body.querySelector('#generate') as HTMLDivElement,
-    btnSubmit: () => document.body.querySelector('.btn-submit') as HTMLDivElement,
+    btnGenerate: () => document.body.querySelector('#generate') as HTMLInputElement,
+    btnSubmit: () => document.body.querySelector('.btn-submit') as HTMLInputElement,
   }
 
   const mockResults: Object[] = [
