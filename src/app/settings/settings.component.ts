@@ -42,7 +42,7 @@ export class SettingsComponent implements OnInit {
       difficulty: new FormControl('75'),
       surface: new FormControl('All'),
       lMin: new FormControl('3'),
-      lMax: new FormControl('11'),
+      lMax: new FormControl('20'),
       stages: new FormControl('5'),
       country: new FormControl('All'),
       selectedTracks: this.fb.array([]),
