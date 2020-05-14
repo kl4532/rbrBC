@@ -19,8 +19,10 @@ export class GeneralComponent implements OnInit, OnDestroy {
   sugDifficulty: number;
   settingsForm: FormGroup;
   started: boolean = false;
+  finished: boolean = false;
   driversOut: Driver[];
   totalDistance: number;
+  points: number[] = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1];
 
   ngOnInit() {
     this.subscription = this.srv.getTotalResults()
@@ -50,6 +52,9 @@ export class GeneralComponent implements OnInit, OnDestroy {
                   return total + length;
                 })
                 .toFixed(0);
+              if(this.currentStage === +data.settingsForm.value.stages) {
+                this.finished = true;
+              }
           }
       })
   }

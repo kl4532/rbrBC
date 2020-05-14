@@ -11,14 +11,18 @@
     </div>
     <table >
         <tr>
+            <th>Place</th>
             <th>Name</th>
             <th>Time</th>
             <th>Gap</th>
+            <th *ngIf="finished">PTS</th>
         </tr>
-        <tr [ngClass]="{'player': driver.player}" *ngFor="let driver of drivers">
+        <tr [ngClass]="{'player': driver.player}" *ngFor="let driver of drivers; let i = index">
+            <th>{{ i+1 }}</th>
             <td>{{ driver.name }}</td>
             <td>{{ driver.totalTimeString }}</td>
             <td>{{ driver.gap }}</td>
+            <th *ngIf="finished">{{ points.length > i ? points[i] : 0 }}</th>
         </tr>
     </table>
 
@@ -32,7 +36,7 @@
     </div>
     
 
-    <div class="center" *ngIf="currentStage === +settingsForm.value.stages">
+    <div class="center" *ngIf="finished">
         <hr>
 
         <h3>Estimated level of players</h3>
