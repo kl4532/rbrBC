@@ -1,0 +1,958 @@
+[
+  {
+    "Stage": "Ai-Petri",
+    "Time": "11:02.2"
+  },
+  {
+    "Stage": "Ai-Petri Winter",
+    "Time": "12:43.6"
+  },
+  {
+    "Stage": "Akagi Mountain",
+    "Time": "02:43.9"
+  },
+  {
+    "Stage": "Akagi Mountain II",
+    "Time": "02:46.3"
+  },
+  {
+    "Stage": "Autiovaara",
+    "Time": "03:15.7"
+  },
+  {
+    "Stage": "Autiovaara II",
+    "Time": "03:18.6"
+  },
+  {
+    "Stage": "Azov",
+    "Time": "11:59.2"
+  },
+  {
+    "Stage": "Azov II",
+    "Time": "12:44.8"
+  },
+  {
+    "Stage": "Barum rally 2009 Semetin",
+    "Time": "05:42.1"
+  },
+  {
+    "Stage": "Barum rally 2010 Semetin",
+    "Time": "05:45.8"
+  },
+  {
+    "Stage": "Bergheim v1.1",
+    "Time": "05:07.9"
+  },
+  {
+    "Stage": "Berica",
+    "Time": "06:40.2"
+  },
+  {
+    "Stage": "Bisanne",
+    "Time": "03:58.8"
+  },
+  {
+    "Stage": "Bisanne II",
+    "Time": "04:00.9"
+  },
+  {
+    "Stage": "Blanare",
+    "Time": "04:50.3"
+  },
+  {
+    "Stage": "Blanare II",
+    "Time": "04:25.6"
+  },
+  {
+    "Stage": "Bruchsal-Unteroewisheim",
+    "Time": "04:20.9"
+  },
+  {
+    "Stage": "Capo Di Feno",
+    "Time": "02:43.0"
+  },
+  {
+    "Stage": "Capo Di Feno II",
+    "Time": "02:43.3"
+  },
+  {
+    "Stage": "Carvalho de Rei 2008",
+    "Time": "05:00.2"
+  },
+  {
+    "Stage": "Carvalho de Rei 2008 II",
+    "Time": "04:57.2"
+  },
+  {
+    "Stage": "Castrezzato",
+    "Time": "05:04.9"
+  },
+  {
+    "Stage": "Chirdonhead",
+    "Time": "03:06.8"
+  },
+  {
+    "Stage": "Chirdonhead II",
+    "Time": "03:06.9"
+  },
+  {
+    "Stage": "Cote D'Arbroz",
+    "Time": "02:15.8"
+  },
+  {
+    "Stage": "Cote D'Arbroz II",
+    "Time": "02:26.3"
+  },
+  {
+    "Stage": "Courcelles Val'd Esnoms",
+    "Time": "04:19.1"
+  },
+  {
+    "Stage": "Diamond Creek",
+    "Time": "02:49.0"
+  },
+  {
+    "Stage": "Diamond Creek II",
+    "Time": "02:43.1"
+  },
+  {
+    "Stage": "Dolmen",
+    "Time": "05:17.5"
+  },
+  {
+    "Stage": "East-West",
+    "Time": "06:04.2"
+  },
+  {
+    "Stage": "East-West II",
+    "Time": "06:08.3"
+  },
+  {
+    "Stage": "Falstone",
+    "Time": "03:31.5"
+  },
+  {
+    "Stage": "Falstone II",
+    "Time": "03:37.7"
+  },
+  {
+    "Stage": "Fernet Branca",
+    "Time": "04:57.5"
+  },
+  {
+    "Stage": "Foron",
+    "Time": "05:49.7"
+  },
+  {
+    "Stage": "Foron II",
+    "Time": "05:51.6"
+  },
+  {
+    "Stage": "Foron Snow",
+    "Time": "06:31.8"
+  },
+  {
+    "Stage": "Foron Snow II",
+    "Time": "06:38.5"
+  },
+  {
+    "Stage": "Fraizer Wells",
+    "Time": "01:53.9"
+  },
+  {
+    "Stage": "Frazier Wells II",
+    "Time": "01:52.4"
+  },
+  {
+    "Stage": "FSO Zeran - Warsaw",
+    "Time": "04:59.0"
+  },
+  {
+    "Stage": "GB Sprint Extreme",
+    "Time": "04:13.9"
+  },
+  {
+    "Stage": "Gestel",
+    "Time": "03:28.3"
+  },
+  {
+    "Stage": "Grand Canaria ROC 2000",
+    "Time": "01:56.8"
+  },
+  {
+    "Stage": "Greenhills",
+    "Time": "03:12.6"
+  },
+  {
+    "Stage": "Greenhills II",
+    "Time": "03:19.3"
+  },
+  {
+    "Stage": "Halenkovice SD",
+    "Time": "02:04.4"
+  },
+  {
+    "Stage": "Harwood Forest",
+    "Time": "03:13.0"
+  },
+  {
+    "Stage": "Harwood Forest II",
+    "Time": "03:11.5"
+  },
+  {
+    "Stage": "Haugenau 2012",
+    "Time": "03:57.4"
+  },
+  {
+    "Stage": "Hradek 1",
+    "Time": "03:45.2"
+  },
+  {
+    "Stage": "Hradek 2",
+    "Time": "03:44.9"
+  },
+  {
+    "Stage": "Hroudovany",
+    "Time": "02:49.7"
+  },
+  {
+    "Stage": "Hroudovany II",
+    "Time": "02:47.2"
+  },
+  {
+    "Stage": "Hualapai Nation",
+    "Time": "03:41.9"
+  },
+  {
+    "Stage": "Hualapai Nation II",
+    "Time": "03:38.5"
+  },
+  {
+    "Stage": "Humalamaki 1.0",
+    "Time": "01:42.9"
+  },
+  {
+    "Stage": "Humalamaki Reversed",
+    "Time": "01:43.1"
+  },
+  {
+    "Stage": "Hyppyjulma gravel",
+    "Time": "03:16.6"
+  },
+  {
+    "Stage": "Hyppyjulma gravel II",
+    "Time": "03:14.7"
+  },
+  {
+    "Stage": "Hyppyjulma tarmac",
+    "Time": "02:54.4"
+  },
+  {
+    "Stage": "Hyppyjulma tarmac II",
+    "Time": "02:55.7"
+  },
+  {
+    "Stage": "Jirkovicky",
+    "Time": "02:11.2"
+  },
+  {
+    "Stage": "Jirkovicky II",
+    "Time": "02:30.1"
+  },
+  {
+    "Stage": "Joukkovaara gravel",
+    "Time": "05:13.1"
+  },
+  {
+    "Stage": "Joukkovaara gravel II",
+    "Time": "05:14.6"
+  },
+  {
+    "Stage": "Joukkovaara tarmac",
+    "Time": "04:42.7"
+  },
+  {
+    "Stage": "Joukkovaara tarmac II",
+    "Time": "04:40.0"
+  },
+  {
+    "Stage": "Joux Plane",
+    "Time": "05:20.6"
+  },
+  {
+    "Stage": "Joux Plane II",
+    "Time": "05:24.8"
+  },
+  {
+    "Stage": "Joux Verte",
+    "Time": "05:02.4"
+  },
+  {
+    "Stage": "Joux Verte II",
+    "Time": "04:58.2"
+  },
+  {
+    "Stage": "Junior Wheels I",
+    "Time": "04:24.1"
+  },
+  {
+    "Stage": "Junior Wheels II",
+    "Time": "04:29.1"
+  },
+  {
+    "Stage": "Kaihuavaara",
+    "Time": "03:44.8"
+  },
+  {
+    "Stage": "Kaihuavaara II",
+    "Time": "03:45.3"
+  },
+  {
+    "Stage": "Karlstad",
+    "Time": "01:24.6"
+  },
+  {
+    "Stage": "Karlstad II",
+    "Time": "01:26.8"
+  },
+  {
+    "Stage": "Karowa 2009",
+    "Time": "01:30.8"
+  },
+  {
+    "Stage": "Kolmenjarvet gravel",
+    "Time": "03:44.9"
+  },
+  {
+    "Stage": "Kolmenjarvet gravel II",
+    "Time": "03:48.6"
+  },
+  {
+    "Stage": "Kolmenjarvet tarmac",
+    "Time": "03:19.8"
+  },
+  {
+    "Stage": "Kolmenjarvet tarmac II",
+    "Time": "03:23.3"
+  },
+  {
+    "Stage": "Kormoran I",
+    "Time": "05:51.5"
+  },
+  {
+    "Stage": "Kormoran II",
+    "Time": "07:06.8"
+  },
+  {
+    "Stage": "Kormoran Shakedown",
+    "Time": "03:14.3"
+  },
+  {
+    "Stage": "Kuadonvaara",
+    "Time": "03:20.8"
+  },
+  {
+    "Stage": "La Rocca",
+    "Time": "04:54.7"
+  },
+  {
+    "Stage": "Lernovec",
+    "Time": "01:51.9"
+  },
+  {
+    "Stage": "Lernovec II",
+    "Time": "01:59.7"
+  },
+  {
+    "Stage": "Liptakov 1",
+    "Time": "03:41.2"
+  },
+  {
+    "Stage": "Liptakov 2",
+    "Time": "03:37.6"
+  },
+  {
+    "Stage": "Livadija",
+    "Time": "03:17.6"
+  },
+  {
+    "Stage": "Livadija II",
+    "Time": "03:18.5"
+  },
+  {
+    "Stage": "Loch Ard",
+    "Time": "04:09.5"
+  },
+  {
+    "Stage": "Loch Ard II",
+    "Time": "04:10.0"
+  },
+  {
+    "Stage": "Lousada - RG",
+    "Time": "02:52.4"
+  },
+  {
+    "Stage": "Lousada - RX",
+    "Time": "02:36.5"
+  },
+  {
+    "Stage": "Lousada - WRC",
+    "Time": "02:34.5"
+  },
+  {
+    "Stage": "Luceram-Col Saint Roch",
+    "Time": "03:42.0"
+  },
+  {
+    "Stage": "Maton I",
+    "Time": "02:58.7"
+  },
+  {
+    "Stage": "Maton II",
+    "Time": "03:01.6"
+  },
+  {
+    "Stage": "Maton snow",
+    "Time": "03:32.1"
+  },
+  {
+    "Stage": "Maton snow II",
+    "Time": "03:33.2"
+  },
+  {
+    "Stage": "Mineshaft",
+    "Time": "04:25.5"
+  },
+  {
+    "Stage": "Mineshaft II",
+    "Time": "04:35.8"
+  },
+  {
+    "Stage": "Mitterbach",
+    "Time": "01:22.8"
+  },
+  {
+    "Stage": "Mlynky",
+    "Time": "03:16.4"
+  },
+  {
+    "Stage": "Mlynky II",
+    "Time": "03:21.7"
+  },
+  {
+    "Stage": "Mlynky Snow",
+    "Time": "03:41.6"
+  },
+  {
+    "Stage": "Mlynky Snow II",
+    "Time": "03:41.4"
+  },
+  {
+    "Stage": "Mustaselka",
+    "Time": "02:04.2"
+  },
+  {
+    "Stage": "Mustaselka II",
+    "Time": "04:44.4"
+  },
+  {
+    "Stage": "New Bobs",
+    "Time": "05:02.8"
+  },
+  {
+    "Stage": "New Bobs II",
+    "Time": "04:56.1"
+  },
+  {
+    "Stage": "Noiker",
+    "Time": "07:17.9"
+  },
+  {
+    "Stage": "Noiker II",
+    "Time": "07:18.3"
+  },
+  {
+    "Stage": "Northumbria",
+    "Time": "05:18.9"
+  },
+  {
+    "Stage": "Northumbria Tarmac",
+    "Time": "04:50.8"
+  },
+  {
+    "Stage": "Osli - Stryckovy",
+    "Time": "04:54.1"
+  },
+  {
+    "Stage": "Passo Valle",
+    "Time": "03:34.9"
+  },
+  {
+    "Stage": "Passo Valle Reverse",
+    "Time": "03:32.9"
+  },
+  {
+    "Stage": "Peklo",
+    "Time": "05:11.0"
+  },
+  {
+    "Stage": "Peklo II",
+    "Time": "01:18.7"
+  },
+  {
+    "Stage": "Peklo II Snow",
+    "Time": "05:43.2"
+  },
+  {
+    "Stage": "Peklo Snow",
+    "Time": "05:43.9"
+  },
+  {
+    "Stage": "Peyregrosse - Mandagout",
+    "Time": "08:23.1"
+  },
+  {
+    "Stage": "Peyregrosse - Mandagout NIGHT",
+    "Time": "08:28.8"
+  },
+  {
+    "Stage": "Pian del Colle",
+    "Time": "03:54.1"
+  },
+  {
+    "Stage": "Pian del Colle Reversed",
+    "Time": "04:07.5"
+  },
+  {
+    "Stage": "Pian del Colle Snow",
+    "Time": "04:10.9"
+  },
+  {
+    "Stage": "Pian del Colle Snow Reversed",
+    "Time": "04:30.9"
+  },
+  {
+    "Stage": "Pikes Peak 2008",
+    "Time": "10:56.6"
+  },
+  {
+    "Stage": "Pirka Menoko",
+    "Time": "04:35.6"
+  },
+  {
+    "Stage": "Pirka Menoko II",
+    "Time": "04:38.0"
+  },
+  {
+    "Stage": "Prospect Ridge",
+    "Time": "04:05.2"
+  },
+  {
+    "Stage": "Prospect Ridge II",
+    "Time": "04:10.7"
+  },
+  {
+    "Stage": "Prospect Ridge II A",
+    "Time": "04:03.0"
+  },
+  {
+    "Stage": "PTD Rallysprint",
+    "Time": "03:22.8"
+  },
+  {
+    "Stage": "Puy du Lac",
+    "Time": "02:49.7"
+  },
+  {
+    "Stage": "Rally School Czech",
+    "Time": "01:36.9"
+  },
+  {
+    "Stage": "Rally School Czech II",
+    "Time": "01:37.7"
+  },
+  {
+    "Stage": "Rally school mix",
+    "Time": "02:48.7"
+  },
+  {
+    "Stage": "Rally school mix II",
+    "Time": "02:52.1"
+  },
+  {
+    "Stage": "Rally School Stage",
+    "Time": "01:16.0"
+  },
+  {
+    "Stage": "Rally School Stage II",
+    "Time": "01:18.1"
+  },
+  {
+    "Stage": "Rally school tarmac",
+    "Time": "02:41.8"
+  },
+  {
+    "Stage": "Rally school tarmac II",
+    "Time": "02:44.6"
+  },
+  {
+    "Stage": "Rally Wisla Shakedown",
+    "Time": "01:48.1"
+  },
+  {
+    "Stage": "Rallysprint Hondarribia 2011",
+    "Time": "04:49.1"
+  },
+  {
+    "Stage": "Red Bull HC",
+    "Time": "08:44.5"
+  },
+  {
+    "Stage": "ROC 2008",
+    "Time": "01:43.7"
+  },
+  {
+    "Stage": "RP 2009 Shakedown",
+    "Time": "03:09.0"
+  },
+  {
+    "Stage": "RP 2009 Shakedown Reversed",
+    "Time": "02:38.5"
+  },
+  {
+    "Stage": "RSI slalom gegeWRC",
+    "Time": "01:41.5"
+  },
+  {
+    "Stage": "RSI slalom Shonen",
+    "Time": "00:54.6"
+  },
+  {
+    "Stage": "Sardian",
+    "Time": "03:22.9"
+  },
+  {
+    "Stage": "Sardian Night",
+    "Time": "03:22.2"
+  },
+  {
+    "Stage": "Shakedown Rally del Salento 2014",
+    "Time": "02:03.9"
+  },
+  {
+    "Stage": "Shepherds Shield",
+    "Time": "02:25.3"
+  },
+  {
+    "Stage": "Shepherds Shield II",
+    "Time": "02:28.2"
+  },
+  {
+    "Stage": "Sherwood Forest I",
+    "Time": "07:34.4"
+  },
+  {
+    "Stage": "Sherwood Forest I Summer",
+    "Time": "07:48.0"
+  },
+  {
+    "Stage": "Sherwood Forest II",
+    "Time": "07:57.2"
+  },
+  {
+    "Stage": "Sherwood Forest II Summer",
+    "Time": "07:50.7"
+  },
+  {
+    "Stage": "Shomaru Pass",
+    "Time": "04:20.7"
+  },
+  {
+    "Stage": "Shomaru Pass II",
+    "Time": "04:29.6"
+  },
+  {
+    "Stage": "Shurdin I",
+    "Time": "12:22.6"
+  },
+  {
+    "Stage": "Shurdin II",
+    "Time": "12:38.6"
+  },
+  {
+    "Stage": "Sieversdorf V1.1",
+    "Time": "04:35.5"
+  },
+  {
+    "Stage": "Sikakama",
+    "Time": "05:10.5"
+  },
+  {
+    "Stage": "Sikakama II",
+    "Time": "05:12.3"
+  },
+  {
+    "Stage": "Sipirkakim",
+    "Time": "04:36.0"
+  },
+  {
+    "Stage": "Sipirkakim II",
+    "Time": "04:35.6"
+  },
+  {
+    "Stage": "Slovakia Ring 2014",
+    "Time": "06:16.9"
+  },
+  {
+    "Stage": "Slovakia Ring 2014 II",
+    "Time": "06:22.2"
+  },
+  {
+    "Stage": "Snekovice",
+    "Time": "03:44.9"
+  },
+  {
+    "Stage": "Snekovice II",
+    "Time": "03:32.8"
+  },
+  {
+    "Stage": "Snow Bisanne",
+    "Time": "04:36.4"
+  },
+  {
+    "Stage": "Snow Bisanne II",
+    "Time": "04:37.9"
+  },
+  {
+    "Stage": "Snow Cote D'Arbroz",
+    "Time": "02:52.4"
+  },
+  {
+    "Stage": "Snow Cote D'Arbroz II",
+    "Time": "02:44.2"
+  },
+  {
+    "Stage": "Snow Joux Plane",
+    "Time": "05:58.7"
+  },
+  {
+    "Stage": "Snow Joux Plane II",
+    "Time": "05:56.1"
+  },
+  {
+    "Stage": "Snow Joux Verte",
+    "Time": "05:41.7"
+  },
+  {
+    "Stage": "Snow Joux Verte II",
+    "Time": "05:35.6"
+  },
+  {
+    "Stage": "Sorica",
+    "Time": "07:53.9"
+  },
+  {
+    "Stage": "Sosnova",
+    "Time": "04:33.5"
+  },
+  {
+    "Stage": "Sourkov",
+    "Time": "03:05.0"
+  },
+  {
+    "Stage": "Sourkov 2",
+    "Time": "03:09.2"
+  },
+  {
+    "Stage": "SS Daniel Bonara",
+    "Time": "03:21.6"
+  },
+  {
+    "Stage": "SSS Mikolajki I",
+    "Time": "01:40.4"
+  },
+  {
+    "Stage": "SSS Mikolajki II",
+    "Time": "01:43.5"
+  },
+  {
+    "Stage": "SSS York I",
+    "Time": "03:06.6"
+  },
+  {
+    "Stage": "SSS York II",
+    "Time": "03:07.6"
+  },
+  {
+    "Stage": "Stryckovy - Zadni Porici",
+    "Time": "02:51.1"
+  },
+  {
+    "Stage": "Stryckovy okruh",
+    "Time": "04:07.3"
+  },
+  {
+    "Stage": "Sturec",
+    "Time": "04:53.8"
+  },
+  {
+    "Stage": "Sturec II",
+    "Time": "04:55.4"
+  },
+  {
+    "Stage": "Sturec snow",
+    "Time": "05:35.5"
+  },
+  {
+    "Stage": "Sturec snow II",
+    "Time": "05:36.0"
+  },
+  {
+    "Stage": "Sumburk 2007",
+    "Time": "06:31.9"
+  },
+  {
+    "Stage": "Svince",
+    "Time": "02:15.3"
+  },
+  {
+    "Stage": "Svince II",
+    "Time": "02:22.7"
+  },
+  {
+    "Stage": "Sweet Lamb",
+    "Time": "02:49.3"
+  },
+  {
+    "Stage": "Sweet Lamb II",
+    "Time": "02:49.6"
+  },
+  {
+    "Stage": "SWISS I",
+    "Time": "03:44.5"
+  },
+  {
+    "Stage": "SWISS II",
+    "Time": "04:29.1"
+  },
+  {
+    "Stage": "Swiss III",
+    "Time": "06:31.6"
+  },
+  {
+    "Stage": "Swiss IV",
+    "Time": "07:24.7"
+  },
+  {
+    "Stage": "Tanner",
+    "Time": "02:43.6"
+  },
+  {
+    "Stage": "Tanner II",
+    "Time": "02:45.4"
+  },
+  {
+    "Stage": "Tavia",
+    "Time": "01:55.8"
+  },
+  {
+    "Stage": "Torre Vecchia",
+    "Time": "05:22.7"
+  },
+  {
+    "Stage": "Torsby Shakedown",
+    "Time": "02:17.5"
+  },
+  {
+    "Stage": "Travanca do Monte",
+    "Time": "01:31.5"
+  },
+  {
+    "Stage": "Uchan-Su",
+    "Time": "07:20.4"
+  },
+  {
+    "Stage": "Uchan-Su Winter",
+    "Time": "07:59.4"
+  },
+  {
+    "Stage": "Uhorna",
+    "Time": "05:14.1"
+  },
+  {
+    "Stage": "Uhorna II",
+    "Time": "05:20.6"
+  },
+  {
+    "Stage": "Uhorna snow",
+    "Time": "06:00.3"
+  },
+  {
+    "Stage": "Uhorna snow II",
+    "Time": "05:52.8"
+  },
+  {
+    "Stage": "Undva",
+    "Time": "04:51.3"
+  },
+  {
+    "Stage": "Undva Reversed",
+    "Time": "04:54.3"
+  },
+  {
+    "Stage": "Uzkotin",
+    "Time": "04:22.0"
+  },
+  {
+    "Stage": "Uzkotin II",
+    "Time": "04:21.9"
+  },
+  {
+    "Stage": "Verkiai 2010",
+    "Time": "03:04.2"
+  },
+  {
+    "Stage": "Verkiai 2010 Reverse",
+    "Time": "03:23.2"
+  },
+  {
+    "Stage": "Verkiai 2010 SSS",
+    "Time": "00:57.5"
+  },
+  {
+    "Stage": "Versme",
+    "Time": "02:12.4"
+  },
+  {
+    "Stage": "Vicar",
+    "Time": "02:47.1"
+  },
+  {
+    "Stage": "Vieux Moulin-Perrancey",
+    "Time": "10:26.5"
+  },
+  {
+    "Stage": "Vinec-Skalsko",
+    "Time": "08:46.6"
+  },
+  {
+    "Stage": "Vinec-Skalsko NIGHT",
+    "Time": "08:59.6"
+  },
+  {
+    "Stage": "Zadverice",
+    "Time": "06:35.2"
+  },
+  {
+    "Stage": "Zadverice II",
+    "Time": "06:55.6"
+  },
+  {
+    "Stage": "Zaraso Salos Trekas - 2 laps",
+    "Time": "01:01.2"
+  },
+  {
+    "Stage": "Zaraso Salos Trekas - 5 laps",
+    "Time": "02:27.8"
+  }
+]
