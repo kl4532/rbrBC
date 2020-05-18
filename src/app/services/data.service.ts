@@ -90,8 +90,8 @@ export class DataService {
 
     timeSeconds =  stageTime * driverFactor + luckFactorTime;
 
-    //player with super talent have 25% chance to reduce stage time for 2%
-    talent.super && this.getRandomInt(1,6) === 1 ? timeSeconds = timeSeconds * 0.98 : 0;
+    //player with super talent have 25% chance to reduce stage time for 3%
+    talent.super && this.getRandomInt(1,6) === 1 ? timeSeconds = timeSeconds * 0.97 : 0;
 
     // crash to be implemented
     crash = this.getRandomInt(1,100) > (100-talent.safe*2) ? true : false;

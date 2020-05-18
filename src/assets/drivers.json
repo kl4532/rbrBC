@@ -6,8 +6,8 @@
             "talent": {
                 "fast": 1,
                 "consistence": 2,
-                "safe": 2,
-                "super": false
+                "safe": 1,
+                "super": true
             },
             "stages": [],
             "totalTimeSeconds": 0,
@@ -45,7 +45,7 @@
             "talent": {
                 "fast": 2,
                 "consistence": 1,
-                "safe": 2,
+                "safe": 3,
                 "super": false
             },
             "stages": [],
@@ -56,9 +56,9 @@
             "id": 5,
             "name": "Esapekka Lappi",
             "talent": {
-                "fast": 2,
-                "consistence": 2,
-                "safe": 1,
+                "fast": 1,
+                "consistence": 3,
+                "safe": 3,
                 "super": false
             },
             "stages": [],
@@ -71,7 +71,7 @@
             "talent": {
                 "fast": 2,
                 "consistence": 2,
-                "safe": 2,
+                "safe": 4,
                 "super": false
             },
             "stages": [],
@@ -82,8 +82,8 @@
             "id": 7,
             "name": "Takamoto Katsuta",
             "talent": {
-                "fast": 3,
-                "consistence": 1,
+                "fast": 2,
+                "consistence": 2,
                 "safe": 2, 
                 "super": false
             },
@@ -108,8 +108,8 @@
             "id": 9,
             "name": "Gus Greensmith",
             "talent": {
-                "fast": 3,
-                "consistence": 1,
+                "fast": 2,
+                "consistence": 2,
                 "safe": 1,
                 "super": false
             },
@@ -122,9 +122,9 @@
             "name": "Kalle Rovanperä",
             "talent": {
                 "fast": 2,
-                "consistence": 2,
+                "consistence": 1,
                 "safe": 1,
-                "super": true
+                "super": false
             },
             "stages": [],
             "totalTimeSeconds": 0,
@@ -135,8 +135,34 @@
             "name": "Robert Kubica",
             "talent": {
                 "fast": 1,
-                "consistence": 2,
-                "safe": 4,
+                "consistence": 5,
+                "safe": 5,
+                "super": true
+            },
+            "stages": [],
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
+        },
+        {
+            "id": 12,
+            "name": "Dani Sordo",
+            "talent": {
+                "fast": 2,
+                "consistence": 1,
+                "safe": 2,
+                "super": false
+            },
+            "stages": [],
+            "totalTimeSeconds": 0,
+            "totalTimeString": "" 
+        },
+        {
+            "id": 13,
+            "name": "Jari-Matti Latvala",
+            "talent": {
+                "fast": 1,
+                "consistence": 3,
+                "safe": 3,
                 "super": true
             },
             "stages": [],
