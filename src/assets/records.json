@@ -1,100 +1,100 @@
 [
   {
-    "stage": "Ai - Petri Winter",
+    "stage": "Ai-Petri Winter",
     "length": 17.3,
     "surface": "Snow",
-    "record": "12:32.9",
+    "record": "12:43.6",
     "country": "Ukraine"
   },
   {
-    "stage": "Ai - Petri",
+    "stage": "Ai-Petri",
     "length": 17.3,
     "surface": "Tarmac",
-    "record": "10:59.99",
+    "record": "11:02.2",
     "country": "Ukraine"
   },
   {
     "stage": "Akagi Mountain",
     "length": 3.5,
     "surface": "Tarmac",
-    "record": "02:23.88",
+    "record": "02:43.9",
     "country": "Japan"
   },
   {
     "stage": "Akagi Mountain II",
     "length": 3.5,
     "surface": "Tarmac",
-    "record": "02:25.77",
+    "record": "02:46.3",
     "country": "Japan"
   },
   {
     "stage": "Autiovaara",
     "length": 6.1,
     "surface": "Snow",
-    "record": "02:57.69",
+    "record": "03:15.7",
     "country": "Finland"
   },
   {
     "stage": "Autiovaara II",
     "length": 6.1,
     "surface": "Snow",
-    "record": "03:02.75",
+    "record": "03:18.6",
     "country": "Finland"
   },
   {
     "stage": "Azov",
     "length": 19.1,
     "surface": "Gravel",
-    "record": "12:24",
+    "record": "11:59.2",
     "country": "Ukraine"
   },
   {
     "stage": "Azov II",
     "length": 19.2,
     "surface": "Gravel",
-    "record": "13:38",
+    "record": "12:44.8",
     "country": "Ukraine"
   },
   {
     "stage": "Barum rally 2009 Semetin",
     "length": 11.7,
     "surface": "Tarmac",
-    "record": "05:29.91",
+    "record": "05:42.1",
     "country": "Czech Republic"
   },
   {
     "stage": "Barum rally 2010 Semetin",
     "length": 11.7,
     "surface": "Tarmac",
-    "record": "05:36.53",
+    "record": "05:45.8",
     "country": "Czech Republic"
   },
   {
-    "stage": "Bergheim",
+    "stage": "Bergheim v1.1",
     "length": 8,
     "surface": "Tarmac",
-    "record": "04:43.84",
+    "record": "05:07.9",
     "country": "Germany"
   },
   {
     "stage": "Berica",
     "length": 14.8,
     "surface": "Gravel",
-    "record": "07:14.53",
+    "record": "06:40.2",
     "country": "Italy"
   },
   {
     "stage": "Bisanne",
     "length": 5.6,
     "surface": "Tarmac",
-    "record": "03:39.35",
+    "record": "03:58.8",
     "country": "France"
   },
   {
     "stage": "Bisanne II",
     "length": 5.6,
     "surface": "Tarmac",
-    "record": "03:40.25",
+    "record": "04:00.9",
     "country": "France"
   },
   {
@@ -108,18 +108,18 @@
     "stage": "Blanare",
     "length": 7.6,
     "surface": "Snow",
-    "record": "04:55.35",
+    "record": "04:50.3",
     "country": "Switzerland"
   },
   {
     "stage": "Blanare II",
     "length": 6.6,
     "surface": "Snow",
-    "record": "04:32.06",
+    "record": "04:25.6",
     "country": "Switzerland"
   },
   {
-    "stage": "Bruchsal - Unterowisheim",
+    "stage": "Bruchsal-Unterowisheim",
     "length": 8.9,
     "surface": "Tarmac",
     "record": "04:11.50",
@@ -129,63 +129,63 @@
     "stage": "Capo Di Feno",
     "length": 4.5,
     "surface": "Tarmac",
-    "record": "02:39.54",
+    "record": "02:43.0",
     "country": "France"
   },
   {
     "stage": "Capo Di Feno II",
     "length": 4.5,
     "surface": "Tarmac",
-    "record": "02:40.24",
+    "record": "02:43.3",
     "country": "France"
   },
   {
     "stage": "Carvalho de Rei 2008",
     "length": 8.2,
     "surface": "Gravel",
-    "record": "05:11.02",
+    "record": "05:00.2",
     "country": "Portugal"
   },
   {
     "stage": "Carvalho de Rei 2008 II",
     "length": 8.2,
     "surface": "Gravel",
-    "record": "05:11.02",
+    "record": "04:57.2",
     "country": "Portugal"
   },
   {
     "stage": "Castrezzato",
     "length": 8.1,
     "surface": "Tarmac",
-    "record": "04:14.9",
+    "record": "05:04.9",
     "country": "Italy"
   },
   {
     "stage": "Chirdonhead",
     "length": 7,
     "surface": "Gravel",
-    "record": "02:59.71",
+    "record": "03:06.8",
     "country": "Great Britain"
   },
   {
     "stage": "Chirdonhead II",
     "length": 6.9,
     "surface": "Gravel",
-    "record": "03:01.13",
+    "record": "03:06.9",
     "country": "Great Britain"
   },
   {
     "stage": "Cote D'Arbroz",
     "length": 4.5,
     "surface": "Tarmac",
-    "record": "02:03.51",
+    "record": "02:15.8",
     "country": "France"
   },
   {
     "stage": "Cote D'Arbroz II",
     "length": 4.3,
     "surface": "Tarmac",
-    "record": "02:13.87",
+    "record": "02:26.3",
     "country": "France"
   },
   {
@@ -206,287 +206,287 @@
     "stage": "Courcelles Val'd Esnoms",
     "length": 9.9,
     "surface": "Tarmac",
-    "record": "04:49.41",
+    "record": "04:19.1",
     "country": "France"
   },
   {
     "stage": "Diamond Creek",
     "length": 7.1,
     "surface": "Gravel",
-    "record": "02:43.4",
+    "record": "02:49.0",
     "country": "USA"
   },
   {
     "stage": "Diamond Creek II",
     "length": 6.8,
     "surface": "Gravel",
-    "record": "02:39.21",
+    "record": "02:43.1",
     "country": "USA"
   },
   {
     "stage": "Dolmen",
     "length": 13.3,
     "surface": "Gravel",
-    "record": "06:35.2",
+    "record": "05:17.5",
     "country": "Italy"
   },
   {
-    "stage": "East - West",
+    "stage": "East-West",
     "length": 9.5,
     "surface": "Gravel",
-    "record": "05:33.84",
+    "record": "06:04.2",
     "country": "Australia"
   },
   {
-    "stage": "East - West II",
+    "stage": "East-West II",
     "length": 9.6,
     "surface": "Gravel",
-    "record": "05:37.99",
+    "record": "06:08.3",
     "country": "Australia"
   },
   {
     "stage": "Falstone",
     "length": 6.6,
     "surface": "Gravel",
-    "record": "03:21.66",
+    "record": "03:31.5",
     "country": "Great Britain"
   },
   {
     "stage": "Falstone II",
     "length": 6.6,
     "surface": "Gravel",
-    "record": "03:26.61",
+    "record": "03:37.7",
     "country": "Great Britain"
   },
   {
     "stage": "Fernet Branca",
     "length": 6,
     "surface": "Gravel",
-    "record": "05:07.97",
+    "record": "04:57.5",
     "country": "Argentina"
   },
   {
     "stage": "Foron",
     "length": 9.2,
     "surface": "Tarmac",
-    "record": "05:28.64",
+    "record": "05:49.7",
     "country": "France"
   },
   {
     "stage": "Foron II",
     "length": 9.2,
     "surface": "Tarmac",
-    "record": "05:33.35",
+    "record": "05:51.6",
     "country": "France"
   },
   {
     "stage": "Foron Snow",
     "length": 9.1,
     "surface": "Snow",
-    "record": "06:17.29",
+    "record": "06:31.8",
     "country": "France"
   },
   {
     "stage": "Foron Snow II",
     "length": 9.1,
     "surface": "Snow",
-    "record": "06:20.35",
+    "record": "06:38.5",
     "country": "France"
   },
   {
     "stage": "Fraizer Wells",
     "length": 5,
     "surface": "Gravel",
-    "record": "01:49.95",
+    "record": "01:53.9",
     "country": "USA"
   },
   {
-    "stage": "Fraizer Wells II",
+    "stage": "Frazier Wells II",
     "length": 5,
     "surface": "Gravel",
-    "record": "01:48.71",
+    "record": "01:52.4",
     "country": "USA"
   },
   {
     "stage": "FSO Zeran - Warsaw",
     "length": 7.1,
     "surface": "Tarmac",
-    "record": "05:11.9",
+    "record": "04:59.0",
     "country": "Poland"
   },
   {
     "stage": "GB Sprint Extreme",
     "length": 6.7,
     "surface": "Gravel",
-    "record": "04:05.14",
+    "record": "04:13.9",
     "country": "Great Britain"
   },
   {
     "stage": "Gestel",
     "length": 7.2,
     "surface": "Tarmac",
-    "record": "03:27.24",
+    "record": "03:28.3",
     "country": "Netherlands"
   },
   {
     "stage": "Grand Canaria ROC 2000",
     "length": 3.8,
     "surface": "Gravel",
-    "record": "01:52.93",
+    "record": "01:56.8",
     "country": "Spain"
   },
   {
     "stage": "Greenhills",
     "length": 6,
     "surface": "Gravel",
-    "record": "03:02.9",
+    "record": "03:12.6",
     "country": "Australia"
   },
   {
     "stage": "Greenhills II",
     "length": 6,
     "surface": "Gravel",
-    "record": "03:06.53",
+    "record": "03:19.3",
     "country": "Australia"
   },
   {
-    "stage": "Halenkovice Shakedown",
+    "stage": "Halenkovice SD",
     "length": 4.2,
     "surface": "Tarmac",
-    "record": "02:11.63",
+    "record": "02:04.4",
     "country": "Czech Republic"
   },
   {
     "stage": "Harwood Forest",
     "length": 6.1,
     "surface": "Gravel",
-    "record": "03:03.10",
+    "record": "03:13.0",
     "country": "Great Britain"
   },
   {
     "stage": "Harwood Forest II",
     "length": 5.9,
     "surface": "Gravel",
-    "record": "03:01.42",
+    "record": "03:11.5",
     "country": "Great Britain"
   },
   {
     "stage": "Haugenau 2012",
     "length": 5.7,
     "surface": "Tarmac",
-    "record": "03:44.94",
+    "record": "03:57.4",
     "country": "France"
   },
   {
-    "stage": "Hradek",
+    "stage": "Hradek 1",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "03:23.17",
+    "record": "03:45.2",
     "country": "Czech Republic"
   },
   {
-    "stage": "Hradek II",
+    "stage": "Hradek 2",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "03:22.15",
+    "record": "03:44.9",
     "country": "Czech Republic"
   },
   {
     "stage": "Hualapai Nation",
     "length": 8.6,
     "surface": "Gravel",
-    "record": "03:28.78",
+    "record": "03:41.9",
     "country": "USA"
   },
   {
     "stage": "Hualapai Nation II",
     "length": 8.6,
     "surface": "Gravel",
-    "record": "03:24.92",
+    "record": "03:38.5",
     "country": "USA"
   },
   {
-    "stage": "Humalamaki",
+    "stage": "Humalamaki 1.0",
     "length": 4.4,
     "surface": "Gravel",
-    "record": "01:40.91",
+    "record": "01:42.9",
     "country": "Finland"
   },
   {
-    "stage": "Humalamaki II",
+    "stage": "Humalamaki Reversed",
     "length": 4.4,
     "surface": "Gravel",
-    "record": "01:43.35",
+    "record": "01:43.1",
     "country": "Finland"
   },
   {
-    "stage": "Hyppyjulma Gravel",
+    "stage": "Hyppyjulma gravel",
     "length": 6.1,
     "surface": "Gravel",
-    "record": "03:12.22",
+    "record": "03:16.6",
     "country": "Finland"
   },
   {
-    "stage": "Hyppyjulma Gravel II",
+    "stage": "Hyppyjulma gravel II",
     "length": 6.1,
     "surface": "Gravel",
-    "record": "03:09.64",
+    "record": "03:14.7",
     "country": "Finland"
   },
   {
-    "stage": "Hyppyjulma Tarmac",
+    "stage": "Hyppyjulma tarmac",
     "length": 6.1,
     "surface": "Tarmac",
-    "record": "02:56.75",
+    "record": "02:54.4",
     "country": "Finland"
   },
   {
-    "stage": "Hyppyjulma Tarmac II",
+    "stage": "Hyppyjulma tarmac II",
     "length": 6.1,
     "surface": "Tarmac",
-    "record": "02:57.65",
+    "record": "02:55.7",
     "country": "Finland"
   },
   {
-    "stage": "Joukkovaara Gravel",
+    "stage": "Joukkovaara gravel",
     "length": 10.2,
     "surface": "Gravel",
-    "record": "05:18.2",
+    "record": "05:13.1",
     "country": "Finland"
   },
   {
-    "stage": "Joukkovaara Gravel II",
+    "stage": "Joukkovaara gravel II",
     "length": 10.2,
     "surface": "Gravel",
-    "record": "05:23.6",
+    "record": "05:14.6",
     "country": "Finland"
   },
   {
-    "stage": "Joukkovaara Tarmac",
+    "stage": "Joukkovaara tarmac",
     "length": 10.2,
     "surface": "Tarmac",
-    "record": "05:32.20",
+    "record": "04:42.7",
     "country": "Finland"
   },
   {
-    "stage": "Joukkovaara Tarmac II",
+    "stage": "Joukkovaara tarmac II",
     "length": 10.2,
     "surface": "Tarmac",
-    "record": "05:23.37",
+    "record": "04:40.0",
     "country": "Finland"
   },
   {
     "stage": "Joux Plane",
     "length": 11.1,
     "surface": "Tarmac",
-    "record": "04:56.93",
+    "record": "05:20.6",
     "country": "France"
   },
   {
     "stage": "Joux Plane II",
     "length": 11.1,
     "surface": "Tarmac",
-    "record": "05:04.14",
+    "record": "05:24.8",
     "country": "France"
   },
   {
@@ -507,14 +507,14 @@
     "stage": "Joux Verte",
     "length": 7.9,
     "surface": "Tarmac",
-    "record": "04:38.30",
+    "record": "05:02.4",
     "country": "France"
   },
   {
     "stage": "Joux Verte II",
     "length": 7.8,
     "surface": "Tarmac",
-    "record": "04:31.62",
+    "record": "04:58.2",
     "country": "France"
   },
   {
@@ -532,7 +532,7 @@
     "country": "France"
   },
   {
-    "stage": "Junior Weels",
+    "stage": "Junior Weels I",
     "length": 5.6,
     "surface": "Gravel",
     "record": "04:11.2",
@@ -542,175 +542,175 @@
     "stage": "Junior Wheels II",
     "length": 5.6,
     "surface": "Gravel",
-    "record": "04:58.79",
+    "record": "04:29.1",
     "country": "Australia"
   },
   {
     "stage": "Kaihuavaara",
     "length": 6.1,
     "surface": "Snow",
-    "record": "03:20.58",
+    "record": "03:44.8",
     "country": "Finland"
   },
   {
     "stage": "Kaihuavaara II",
     "length": 6.1,
     "surface": "Snow",
-    "record": "03:25.12",
+    "record": "03:45.3",
     "country": "Finland"
   },
   {
     "stage": "Karlstad",
     "length": 1.9,
     "surface": "Snow",
-    "record": "01:20.73",
+    "record": "01:24.6",
     "country": "Sweeden"
   },
   {
     "stage": "Karlstad II",
     "length": 1.9,
     "surface": "Snow",
-    "record": "01:22.70",
+    "record": "01:26.8",
     "country": "Sweeden"
   },
   {
     "stage": "Karowa 2009",
     "length": 1.6,
     "surface": "Tarmac",
-    "record": "01:20.49",
+    "record": "01:30.8",
     "country": "Poland"
   },
   {
-    "stage": "Kolmenjarvet Gravel",
+    "stage": "Kolmenjarvet gravel",
     "length": 6.1,
     "surface": "Gravel",
-    "record": "04:30.46",
+    "record": "03:44.9",
     "country": "Finland"
   },
   {
-    "stage": "Kolmenjarvet Gravel II",
+    "stage": "Kolmenjarvet gravel II",
     "length": 6.1,
     "surface": "Gravel",
-    "record": "04:16.43",
+    "record": "03:48.6",
     "country": "Finland"
   },
   {
-    "stage": "Kolmenjarvet Tarmac",
+    "stage": "Kolmenjarvet tarmac",
     "length": 6.1,
     "surface": "Tarmac",
-    "record": "03:40.39",
+    "record": "03:19.8",
     "country": "Finland"
   },
   {
-    "stage": "Kolmenjarvet Tarmac II",
+    "stage": "Kolmenjarvet tarmac II",
     "length": 6.1,
     "surface": "Tarmac",
-    "record": "04:13.36",
+    "record": "03:23.3",
     "country": "Finland"
   },
   {
-    "stage": "Kormoran",
+    "stage": "Kormoran I",
     "length": 10.3,
     "surface": "Gravel",
-    "record": "06:46.15",
+    "record": "05:51.5",
     "country": "Poland"
   },
   {
     "stage": "Kormoran II",
     "length": 12,
     "surface": "Gravel",
-    "record": "08:29.96",
+    "record": "07:06.8",
     "country": "Poland"
   },
   {
     "stage": "Kormoran Shakedown",
     "length": 5.2,
     "surface": "Gravel",
-    "record": "03:39.83",
+    "record": "03:14.3",
     "country": "Poland"
   },
   {
     "stage": "Kuadonvaara",
     "length": 5.7,
     "surface": "Snow",
-    "record": "03:27.73",
+    "record": "03:20.8",
     "country": "Finland"
   },
   {
     "stage": "La Rocca",
     "length": 7.4,
     "surface": "Gravel",
-    "record": "05:06.97",
+    "record": "04:54.7",
     "country": "Italy"
   },
   {
-    "stage": "Liptakov",
+    "stage": "Liptakov 1",
     "length": 6,
     "surface": "Tarmac",
-    "record": "03:15.77",
+    "record": "03:41.2",
     "country": "Czech Republic"
   },
   {
-    "stage": "Liptakov II",
+    "stage": "Liptakov 2",
     "length": 6,
     "surface": "Tarmac",
-    "record": "03:12.60",
+    "record": "03:37.6",
     "country": "Czech Republic"
   },
   {
     "stage": "Livadija",
     "length": 5.5,
     "surface": "Tarmac",
-    "record": "03:01.54",
+    "record": "03:17.6",
     "country": "Ukraine"
   },
   {
     "stage": "Livadija II",
     "length": 5.5,
     "surface": "Tarmac",
-    "record": "03:04.43",
+    "record": "03:18.5",
     "country": "Ukraine"
   },
   {
     "stage": "Loch Ard",
     "length": 8.3,
     "surface": "Gravel",
-    "record": "03:59.48",
+    "record": "04:09.5",
     "country": "Great Britain"
   },
   {
     "stage": "Loch Ard II",
     "length": 8.3,
     "surface": "Gravel",
-    "record": "04:03.78",
+    "record": "04:10.0",
     "country": "Great Britain"
   },
   {
     "stage": "Lousada - RX",
     "length": 3.6,
     "surface": "Tarmac",
-    "record": "02:37.2",
+    "record": "02:36.5",
     "country": "Portugal"
   },
   {
     "stage": "Lousada - RG",
     "length": 3.8,
     "surface": "Gravel",
-    "record": "02:33.34",
+    "record": "02:52.4",
     "country": "Portugal"
   },
   {
     "stage": "Lousada - WRC",
     "length": 3.3,
     "surface": "Gravel",
-    "record": "02:44.6",
+    "record": "02:34.5",
     "country": "Portugal"
   },
   {
-    "stage": "Luceram - Col Saint Roch",
+    "stage": "Luceram-Col Saint Roch",
     "length": 5.6,
     "surface": "Tarmac",
-    "record": "03:54.3",
+    "record": "03:42.0",
     "country": "France"
   },
   {
@@ -721,17 +721,17 @@
     "country": "France"
   },
   {
-    "stage": "Maton",
+    "stage": "Maton I",
     "length": 3.5,
     "surface": "Tarmac",
-    "record": "02:45.66",
+    "record": "02:58.7",
     "country": "France"
   },
   {
     "stage": "Maton II",
     "length": 3.5,
     "surface": "Tarmac",
-    "record": "02:49.47",
+    "record": "03:01.6",
     "country": "France"
   },
   {
@@ -752,91 +752,91 @@
     "stage": "Mineshaft",
     "length": 8.2,
     "surface": "Gravel",
-    "record": "04:10.45",
+    "record": "04:25.5",
     "country": "Australia"
   },
   {
     "stage": "Mineshaft II",
     "length": 8.2,
     "surface": "Gravel",
-    "record": "04:16.87 R",
+    "record": "04:35.8",
     "country": "Australia"
   },
   {
     "stage": "Mitterbach",
     "length": 2.7,
     "surface": "Snow",
-    "record": "01:30.70",
+    "record": "01:22.8",
     "country": "Austria"
   },
   {
     "stage": "Mlynky",
     "length": 7.1,
     "surface": "Tarmac",
-    "record": "03:10.02",
+    "record": "03:16.4",
     "country": "Slovakia"
   },
   {
     "stage": "Mlynky II",
     "length": 7.1,
     "surface": "Tarmac",
-    "record": "03:12.98",
+    "record": "03:21.7",
     "country": "Slovakia"
   },
   {
     "stage": "Mlynky Snow",
     "length": 7.1,
     "surface": "Snow",
-    "record": "03:34.18",
+    "record": "03:41.6",
     "country": "Slovakia"
   },
   {
     "stage": "Mlynky Snow II",
     "length": 7.1,
     "surface": "Snow",
-    "record": "03:33.25",
+    "record": "03:41.4",
     "country": "Slovakia"
   },
   {
     "stage": "Mustaselka",
     "length": 7.9,
     "surface": "Snow",
-    "record": "04:07.91",
+    "record": "02:04.2",
     "country": "Finland"
   },
   {
     "stage": "Mustaselka II",
     "length": 7.7,
     "surface": "Snow",
-    "record": "04:05.55",
+    "record": "04:44.4",
     "country": "Finland"
   },
   {
     "stage": "New Bobs",
     "length": 10.1,
     "surface": "Gravel",
-    "record": "04:43.16",
+    "record": "05:02.8",
     "country": "Australia"
   },
   {
     "stage": "New Bobs II",
     "length": 10,
     "surface": "Gravel",
-    "record": "04:38.83",
+    "record": "04:56.1",
     "country": "Australia"
   },
   {
     "stage": "Noiker",
     "length": 13.8,
     "surface": "Gravel",
-    "record": "06:41.7",
+    "record": "07:17.9",
     "country": "Japan"
   },
   {
     "stage": "Noiker II",
     "length": 13.7,
     "surface": "Gravel",
-    "record": "06:40.94",
+    "record": "07:18.3",
     "country": "Japan"
   },
   {
@@ -850,140 +850,140 @@
     "stage": "Northumbria Tarmac",
     "length": 9,
     "surface": "Tarmac",
-    "record": "04:34.53",
+    "record": "04:50.8",
     "country": "Great Britain"
   },
   {
     "stage": "Osli - Stryckovy",
     "length": 10.6,
     "surface": "Tarmac",
-    "record": "03:19.52",
+    "record": "04:54.1",
     "country": "Czech Republic"
   },
   {
     "stage": "Passo Valle",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "03:34.20",
+    "record": "03:34.9",
     "country": "Italy"
   },
   {
-    "stage": "Passo Valle II",
+    "stage": "Passo Valle Reverse",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "03:34.9",
+    "record": "03:32.9",
     "country": "Italy"
   },
   {
     "stage": "Peklo",
     "length": 8.5,
     "surface": "Tarmac",
-    "record": "04:43.84",
+    "record": "05:11.0",
     "country": "Slovakia"
   },
   {
     "stage": "Peklo II",
     "length": 8.5,
     "surface": "Tarmac",
-    "record": "04:44.84",
+    "record": "01:18.7",
     "country": "Slovakia"
   },
   {
     "stage": "Peklo Snow",
     "length": 8.5,
     "surface": "Snow",
-    "record": "05:32.33",
+    "record": "05:43.9",
     "country": "Slovakia"
   },
   {
-    "stage": "Peklo Snow II",
+    "stage": "Peklo II Snow",
     "length": 8.5,
     "surface": "Snow",
-    "record": "06:13.3",
+    "record": "05:43.2",
     "country": "Slovakia"
   },
   {
     "stage": "Peyregrosse - Mandagout",
     "length": 12.8,
     "surface": "Tarmac",
-    "record": "07:54.26",
+    "record": "08:23.1",
     "country": "France"
   },
   {
-    "stage": "Peyregrosse - Mandagout Night",
+    "stage": "Peyregrosse - Mandagout NIGHT",
     "length": 12.8,
     "surface": "Tarmac",
-    "record": "08:06.11",
+    "record": "08:28.8",
     "country": "France"
   },
   {
     "stage": "Pian del Colle",
     "length": 8.3,
     "surface": "Tarmac",
-    "record": "03:52.95",
+    "record": "03:54.1",
     "country": "Italy"
   },
   {
-    "stage": "Pian del Colle II",
+    "stage": "Pian del Colle Reversed",
     "length": 8.4,
     "surface": "Tarmac",
-    "record": "04:14.87",
+    "record": "04:07.5",
     "country": "Italy"
   },
   {
     "stage": "Pian del Colle Snow",
     "length": 8.3,
     "surface": "Snow",
-    "record": "4:40",
+    "record": "04:10.9",
     "country": "Italy"
   },
   {
     "stage": "Pikes Peak 2008",
     "length": 19.9,
     "surface": "Tarmac",
-    "record": "10:15.28",
+    "record": "10:56.6",
     "country": "USA"
   },
   {
     "stage": "Pirka Menoko",
     "length": 6.7,
     "surface": "Gravel",
-    "record": "04:18.39",
+    "record": "04:35.6",
     "country": "Japan"
   },
   {
     "stage": "Pirka Menoko II",
     "length": 6.7,
     "surface": "Gravel",
-    "record": "04:19.50",
+    "record": "04:38.0",
     "country": "Japan"
   },
   {
     "stage": "Prospect Ridge",
     "length": 7.8,
     "surface": "Gravel",
-    "record": "03:48.07",
+    "record": "04:05.2",
     "country": "USA"
   },
   {
     "stage": "Prospect Ridge II",
     "length": 7.9,
     "surface": "Gravel",
-    "record": "03:50.90",
+    "record": "04:10.7",
     "country": "USA"
   },
   {
     "stage": "PTD Rallysprint",
     "length": 5.1,
     "surface": "Gravel",
-    "record": "03:10.65",
+    "record": "03:22.8",
     "country": "Netherlands"
   },
   {
     "stage": "Puy du Lac",
     "length": 5,
     "surface": "Tarmac",
-    "record": "02:42.77",
+    "record": "02:49.7",
     "country": "France"
   },
   {
@@ -1011,53 +1011,53 @@
     "stage": "Rally School Czech",
     "length": 3.2,
     "surface": "Tarmac",
-    "record": "01:30.77",
+    "record": "01:36.9",
     "country": "Czech Republic"
   },
   {
     "stage": "Rally School Czech II",
     "length": 3.1,
     "surface": "Tarmac",
-    "record": "01:30.84",
+    "record": "01:37.7",
     "country": "Czech Republic"
   },
   {
-    "stage": "Rally School Mix",
+    "stage": "Rally School mix",
     "length": 5.2,
     "surface": "Gravel",
     "record": "03:01.56",
     "country": "Great Britain"
   },
   {
-    "stage": "Rally School Mix II",
+    "stage": "Rally School mix II",
     "length": 5.2,
     "surface": "Gravel",
     "record": "03:01.56",
     "country": "Great Britain"
   },
   {
-    "stage": "Rally School Stage",
+    "stage": "Rally School stage",
     "length": 2.2,
     "surface": "Gravel",
-    "record": "01:10.25",
+    "record": "01:16.0",
     "country": "Great Britain"
   },
   {
-    "stage": "Rally School Stage II",
+    "stage": "Rally School stage II",
     "length": 2.3,
     "surface": "Gravel",
-    "record": "01:11.64",
+    "record": "01:18.1",
     "country": "Great Britain"
   },
   {
-    "stage": "Rally School Tarmac",
+    "stage": "Rally School tarmac",
     "length": 5.2,
     "surface": "Tarmac",
     "record": "02:53.73",
     "country": "Great Britain"
   },
   {
-    "stage": "Rally School Tarmac II",
+    "stage": "Rally School tarmac II",
     "length": 5.2,
     "surface": "Tarmac",
     "record": "02:53.73",
@@ -1067,116 +1067,116 @@
     "stage": "Rally Wisla Shakedown",
     "length": 2.5,
     "surface": "Tarmac",
-    "record": "01:39.52",
+    "record": "01:48.1",
     "country": "Poland"
   },
   {
     "stage": "Rallysprint Hondarribia 2011",
     "length": 8,
     "surface": "Tarmac",
-    "record": "05:15.51",
+    "record": "04:49.1",
     "country": "Spain"
   },
   {
-    "stage": "Red Bull Hill Climb",
+    "stage": "Red Bull HC",
     "length": 14,
     "surface": "Gravel",
-    "record": "08:59.03",
+    "record": "08:44.5",
     "country": "Italy"
   },
   {
     "stage": "ROC 2008",
     "length": 2,
     "surface": "Tarmac",
-    "record": "01:13.62",
+    "record": "01:43.7",
     "country": "Great Britain"
   },
   {
-    "stage": "RSI Slalom gegeWRC",
+    "stage": "RSI slalom gegeWRC",
     "length": 1.8,
     "surface": "Tarmac",
-    "record": "01:32.76",
+    "record": "01:41.5",
     "country": "Ireland"
   },
   {
-    "stage": "RSI Slalom Shonen",
+    "stage": "RSI slalom Shonen",
     "length": 1,
     "surface": "Tarmac",
-    "record": "00:51.43",
+    "record": "00:54.6",
     "country": "Ireland"
   },
   {
     "stage": "Sardian",
     "length": 5.1,
     "surface": "Tarmac",
-    "record": "03:06.63",
+    "record": "03:22.9",
     "country": "USA"
   },
   {
     "stage": "Sardian Night",
     "length": 5.1,
     "surface": "Tarmac",
-    "record": "02:14.11",
+    "record": "03:22.2",
     "country": "USA"
   },
   {
     "stage": "Shepherds Shield",
     "length": 4.8,
     "surface": "Gravel",
-    "record": "02:18.88",
+    "record": "02:25.3",
     "country": "Great Britain"
   },
   {
     "stage": "Shepherds Shield II",
     "length": 4.9,
     "surface": "Gravel",
-    "record": "02:22.15",
+    "record": "02:28.2",
     "country": "Great Britain"
   },
   {
-    "stage": "Sherwood Forest Summer",
+    "stage": "Sherwood Forest I Summer",
     "length": 13.5,
     "surface": "Gravel",
-    "record": "08:26.0",
+    "record": "07:48.0",
     "country": "Great Britain"
   },
   {
-    "stage": "Sherwood Forest Summer II",
+    "stage": "Sherwood Forest II Summer",
     "length": 13.5,
     "surface": "Gravel",
-    "record": "08:20.8",
+    "record": "07:50.7",
     "country": "Great Britain"
   },
   {
     "stage": "Shomaru Pass",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "04:05.18",
+    "record": "04:20.7",
     "country": "Japan"
   },
   {
     "stage": "Shomaru Pass II",
     "length": 5.8,
     "surface": "Tarmac",
-    "record": "04:08.92",
+    "record": "04:29.6",
     "country": "Japan"
   },
   {
-    "stage": "Shurdin",
+    "stage": "Shurdin I",
     "length": 22.1,
     "surface": "Gravel",
-    "record": "12:22.2",
+    "record": "12:22.6",
     "country": "Ukraine"
   },
   {
     "stage": "Shurdin II",
     "length": 22.1,
     "surface": "Gravel",
-    "record": "12:40",
+    "record": "12:38.6",
     "country": "Ukraine"
   },
   {
-    "stage": "Sieversdorf",
+    "stage": "Sieversdorf  V1.1",
     "length": 8,
     "surface": "Tarmac",
     "record": "03:56.74",
@@ -1186,172 +1186,172 @@
     "stage": "Sikakama",
     "length": 10.2,
     "surface": "Snow",
-    "record": "04:55.12",
+    "record": "05:10.5",
     "country": "Finland"
   },
   {
     "stage": "Sikakama II",
     "length": 10.2,
     "surface": "Snow",
-    "record": "04:54.99",
+    "record": "05:12.3",
     "country": "Finland"
   },
   {
     "stage": "Sipirkakim",
     "length": 8.7,
     "surface": "Gravel",
-    "record": "04:15.99",
+    "record": "04:36.0",
     "country": "Japan"
   },
   {
     "stage": "Sipirkakim II",
     "length": 8.7,
     "surface": "Gravel",
-    "record": "04:18.22",
+    "record": "04:35.6",
     "country": "Japan"
   },
   {
     "stage": "Slovakia Ring 2014",
     "length": 11,
     "surface": "Tarmac",
-    "record": "06:01.30",
+    "record": "06:16.9",
     "country": "Slovakia"
   },
   {
     "stage": "Slovakia Ring 2014 II",
     "length": 11,
     "surface": "Tarmac",
-    "record": "06:09.34",
+    "record": "06:22.2",
     "country": "Slovakia"
   },
   {
     "stage": "Sorica",
     "length": 15.5,
     "surface": "Tarmac",
-    "record": "07:23.78",
+    "record": "07:53.9",
     "country": "Slovenia"
   },
   {
     "stage": "SS Daniel Bonara",
     "length": 5.5,
     "surface": "Tarmac",
-    "record": "03:01.31",
+    "record": "03:21.6",
     "country": "Italy"
   },
   {
-    "stage": "SSS Mikolajki",
+    "stage": "SSS Mikolajki I",
     "length": 2.6,
     "surface": "Gravel",
-    "record": "01:41.50",
+    "record": "01:40.4",
     "country": "Poland"
   },
   {
     "stage": "SSS Mikolajki II",
     "length": 2.6,
     "surface": "Gravel",
-    "record": "01:39.07",
+    "record": "01:43.5",
     "country": "Poland"
   },
   {
-    "stage": "SSS York",
+    "stage": "SSS York I",
     "length": 4.3,
     "surface": "Gravel",
-    "record": "03:17.08",
+    "record": "03:06.6",
     "country": "Australia"
   },
   {
     "stage": "Stryckovy - Zadni Porici",
     "length": 6.9,
     "surface": "Tarmac",
-    "record": "02:47.80",
+    "record": "02:51.1",
     "country": "Czech Republic"
   },
   {
     "stage": "Stryckovy okruh",
     "length": 9.2,
     "surface": "Tarmac",
-    "record": "03:04.61",
+    "record": "04:07.3",
     "country": "Czech Republic"
   },
   {
     "stage": "Sturec",
     "length": 8.1,
     "surface": "Tarmac",
-    "record": "04:58.9",
+    "record": "04:53.8",
     "country": "Slovakia"
   },
   {
     "stage": "Sturec II",
     "length": 8.2,
     "surface": "Tarmac",
-    "record": "5:00",
+    "record": "04:55.4",
     "country": "Slovakia"
   },
   {
-    "stage": "Sturec Snow",
+    "stage": "Sturec snow",
     "length": 8.1,
     "surface": "Snow",
-    "record": "5:47",
+    "record": "05:35.5",
     "country": "Slovakia"
   },
   {
-    "stage": "Sturec Snow II",
+    "stage": "Sturec snow II",
     "length": 8.2,
     "surface": "Snow",
-    "record": "5:44",
+    "record": "05:36.0",
     "country": "Slovakia"
   },
   {
     "stage": "Svince",
     "length": 4.8,
     "surface": "Tarmac",
-    "record": "02:20.17",
+    "record": "02:15.3",
     "country": "Czech Republic"
   },
   {
     "stage": "Svince II",
     "length": 4.8,
     "surface": "Tarmac",
-    "record": "02:24.10",
+    "record": "02:22.7",
     "country": "Czech Republic"
   },
   {
     "stage": "Sweet Lamb",
     "length": 5.1,
     "surface": "Gravel",
-    "record": "02:40.03",
+    "record": "02:49.3",
     "country": "Great Britain"
   },
   {
     "stage": "Sweet Lamb II",
     "length": 5.1,
     "surface": "Gravel",
-    "record": "02:40.85",
+    "record": "02:49.6",
     "country": "Great Britain"
   },
   {
-    "stage": "Swiss Gravel II",
+    "stage": "SWISS II",
     "length": 5.6,
     "surface": "Gravel",
-    "record": "03:46.29",
+    "record": "04:29.1",
     "country": "Switzerland"
   },
   {
-    "stage": "Swiss Gravel IV",
+    "stage": "SWISS IV",
     "length": 8.2,
     "surface": "Gravel",
     "record": "07:30.66",
     "country": "Switzerland"
   },
   {
-    "stage": "Swiss Tarmac I",
+    "stage": "SWISS I",
     "length": 5.6,
     "surface": "Tarmac",
-    "record": "06:15.26",
+    "record": "03:44.5",
     "country": "Switzerland"
   },
   {
-    "stage": "Swiss Tarmac III",
+    "stage": "SWISS III",
     "length": 8.2,
     "surface": "Tarmac",
     "record": "07:09.03",
@@ -1361,105 +1361,105 @@
     "stage": "Tanner",
     "length": 3.9,
     "surface": "Gravel",
-    "record": "02:36.39",
+    "record": "02:43.6",
     "country": "Japan"
   },
   {
     "stage": "Tanner II",
     "length": 4,
     "surface": "Gravel",
-    "record": "02:36.16",
+    "record": "02:45.4",
     "country": "Japan"
   },
   {
     "stage": "Tavia",
     "length": 3.8,
     "surface": "Gravel",
-    "record": "02:01.29",
+    "record": "01:55.8",
     "country": "Italy"
   },
   {
     "stage": "Torre Vecchia",
     "length": 9.8,
     "surface": "Tarmac",
-    "record": "05:18.24",
+    "record": "05:22.7",
     "country": "Italy"
   },
   {
     "stage": "Travanca do Monte",
     "length": 3,
     "surface": "Gravel",
-    "record": "01:34.39",
+    "record": "01:31.5",
     "country": "Portugal"
   },
   {
-    "stage": "Uchan - Su",
+    "stage": "Uchan-Su",
     "length": 10.8,
     "surface": "Tarmac",
-    "record": "07:31.56",
+    "record": "07:20.4",
     "country": "Ukraine"
   },
   {
-    "stage": "Uchan - Su Winter",
+    "stage": "Uchan-Su Winter",
     "length": 10.8,
     "surface": "Snow",
-    "record": "11:13.32",
+    "record": "07:59.4",
     "country": "Ukraine"
   },
   {
     "stage": "Uhorna",
     "length": 11.5,
     "surface": "Tarmac",
-    "record": "06:07.72",
+    "record": "05:14.1",
     "country": "Slovakia"
   },
   {
     "stage": "Undva",
     "length": 10,
     "surface": "Gravel",
-    "record": "05:44.41",
+    "record": "04:51.3",
     "country": "Estonia"
   },
   {
-    "stage": "Undva II",
+    "stage": "Undva Reversed",
     "length": 10,
     "surface": "Gravel",
-    "record": "05:42.58",
+    "record": "04:54.3",
     "country": "Estonia"
   },
   {
-    "stage": "Verkiai 2010 I",
+    "stage": "Verkiai 2010",
     "length": 5.6,
     "surface": "Tarmac",
-    "record": "00:56.69",
+    "record": "03:04.2",
     "country": "Lithuania"
   },
   {
     "stage": "Versme",
     "length": 3.2,
     "surface": "Gravel",
-    "record": "01:41.20",
+    "record": "02:12.4",
     "country": "Lithuania"
   },
   {
     "stage": "Vicar",
     "length": 4.7,
     "surface": "Tarmac",
-    "record": "2:52.55",
+    "record": "02:47.1",
     "country": "Spain"
   },
   {
-    "stage": "Vieux Moulin - Perrancey",
+    "stage": "Vieux Moulin-Perrancey",
     "length": 20.5,
     "surface": "Gravel",
-    "record": "11:58",
+    "record": "10:26.5",
     "country": "France"
   },
   {
-    "stage": "Vinec - Skalsko",
+    "stage": "Vinec-Skalsko",
     "length": 17.8,
     "surface": "Tarmac",
-    "record": "10:46",
+    "record": "08:46.6",
     "country": "Czech Republic"
   }
- ]
+]
